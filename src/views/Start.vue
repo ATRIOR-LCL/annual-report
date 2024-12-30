@@ -16,7 +16,7 @@
         </div>
       </div>
       <button class="back" @click="Logout">
-        <img src="../assets/img/qq.png" alt="" />
+        <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${avatar}`" alt="" />
         <span>Come Back</span>
       </button>
       <button class="brutalist-button" @click="Going" @touchstart="Going">
@@ -54,6 +54,8 @@ onMounted(async () => {
   if (getres) {
     console.log("hei");
     userid.value = String(getres.userId);
+    avatar.value=String(getres.avatar)
+    console.log(avatar.value)
     // userid.value = getres.data["userId"];
     router.push({ name: "main" });
   } else {

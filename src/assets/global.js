@@ -6,7 +6,7 @@ export const gogo = ref(true);
 export const contain = ref(false);
 export const isScoll = ref(false);
 export const userid = ref(null);
-export const avatar = ref(null);
+export let avatar = ref(null);
 export const days = ref(0)
 
 export const liuyang = ref(null);
