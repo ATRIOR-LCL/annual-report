@@ -1,0 +1,213 @@
+.leitai {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pmc {
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  opacity: 0;
+  filter: blur(0.1rem);
+  transition: all 3s ease;
+}
+
+.lttxt {
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lttxt div {
+  display: inline-block;
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+.txt1 {
+  transition: all 1s ease;
+  transform: translateY(1rem);
+  filter: blur(0.1rem);
+  opacity: 0;
+  transition-delay: 0.5s;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.txt2 {
+  transition: all 0.5s linear;
+  transform: translateX(-1rem);
+  filter: blur(0.1rem);
+  opacity: 0;
+  transition-delay: 1.5s;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.txt2 span {
+  margin: 0 !important;
+  font-size: .7rem;
+  letter-spacing: 0 !important;
+  color: #fff;
+}
+
+.txt3 {
+  transition: all 0.5s linear;
+  transform: translateX(1rem);
+  filter: blur(0.1rem);
+  opacity: 0;
+  transition-delay: 2s;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.txt3 span {
+  font-size: .6rem;
+  color: #fff;
+}
+
+.txt4 {
+  transition: all 1s ease;
+  transform: translateY(1rem);
+  filter: blur(0.1rem);
+  opacity: 0;
+  transition-delay: 2.5s;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.zgn {
+  position: relative;
+  top: 15%;
+  width: 30%;
+  aspect-ratio: 1/1;
+  transition: all 1s ease;
+  transition-delay: 3s;
+  opacity: 0;
+  z-index: 55;
+}
+
+.zgn img {
+  width: 100%;
+}
+
+.zgn::after {
+  content: "上一届都是原神这届会是崩铁吧";
+  position: absolute;
+  box-sizing: border-box;
+  padding: 0.1rem;
+  display: block;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  top: 20%;
+  left: -100%;
+  width: 3rem;
+  height: 2rem;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  background-color: #fff;
+}
+
+.nailong {
+  position: absolute;
+  width: 20%;
+  bottom: 0;
+  opacity: 0;
+  z-index: 60;
+}
+
+@keyframes fly {
+  from {
+    transform: translate(0) rotate(0);
+  }
+  to {
+    transform: translate(100vw, -50vh) rotate(720deg);
+  }
+}
+
+@keyframes nl {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-60vh);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-50vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-150vh);
+  }
+}
+
+.szyx,
+.jz,
+.ygg,
+.cc,
+.hwc {
+  font-size: 0.4rem;
+  display: inline-block;
+  position: absolute;
+  color: #fff;
+  opacity: 0;
+  filter: blur(0.1rem);
+  transition: all 2s ease;
+}
+
+.szyx {
+  top: 60%;
+  left: 5%;
+}
+
+.jz {
+  top: 80%;
+  left: 20%;
+}
+
+.ygg {
+  right: 30%;
+  top: 55%;
+}
+
+.cc {
+  left: 60%;
+  top: 75%;
+}
+
+.llzm {
+  position: absolute;
+  top: 65%;
+  font-weight: 700;
+  font-size: 0.55rem;
+  opacity: 0;
+  transition: all 2s ease;
+  transition-delay: 0.5s;
+  filter: blur(0.1rem);
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.llzm span {
+  color: #fff;
+}

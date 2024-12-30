@@ -1,0 +1,167 @@
+.night {
+  width: 90%;
+  height: 80%;
+  position: relative;
+  top: 0.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  /* background-color: red; */
+  background-color: rgb(41, 41, 41);
+}
+
+.moon {
+  position: relative;
+  right: 0.5rem;
+  bottom: 0.2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: cyan;
+  transition: all 1s ease;
+  transition-delay: 0.8s;
+  transform: translateY(1rem);
+  opacity: 0;
+  filter: blur(0.1rem);
+}
+
+.moon::before {
+  content: "";
+  display: block;
+  z-index: 2;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(41, 41, 41);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sea {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  /* background-color: red; */
+  /* background-color: red; */
+  backdrop-filter: blur(30px);
+  z-index: 66;
+  /* background-color: rgb(41, 41, 41); */
+  /* background-color: aliceblue; */
+}
+
+.nightfont {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 6rem;
+  height: 1rem;
+  top: 0;
+  left: 1rem;
+  /* background-color: red; */
+  font-size: 0.35rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: rgba(0, 0, 0, 0);
+  background-clip: text;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  transition: all 1s ease;
+  transition-delay: 0.5s;
+  transform: translateX(-3rem);
+  opacity: 0;
+  filter: blur(0.1rem);
+}
+
+.night span:nth-child(1) {
+  color: aliceblue !important;
+}
+
+.night span:nth-child(2) {
+  color: #fff !important;
+}
+
+.nightgl {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 5rem;
+  height: 0.5rem;
+  position: absolute;
+  left: 1.2rem;
+  top: 1.1rem;
+  color: aliceblue;
+  font-weight: 70;
+  font-size: 0.2rem;
+  transition: all 1s ease;
+  transition-delay: 1s;
+  transform: translateX(-3.5rem);
+  opacity: 0;
+  filter: blur(0.1rem);
+
+  .haiyou{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-size: .3rem;
+  }
+}
+
+/* @media screen and (max-width: 1000px){ */
+.night {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nightfont {
+  letter-spacing: 0.06rem;
+  width: 100%;
+  height: 2rem;
+  background-color: red;
+  font-size: 0.56rem;
+  top: 10%;
+  left: 0;
+  margin-left: 0.1rem;
+}
+
+.nightgl {
+  width: 10%;
+  top: 20%;
+  left: 0;
+  /* left: 10%; */
+  width: 100%;
+  height: 2rem;
+  /* background-color: #66a6ff; */
+  font-size: 0.4rem;
+  margin-left: 0.1rem;
+}
+
+.sticker {
+  width: 15%;
+  display: block;
+  height: auto;
+  margin-left: 0.5rem;
+}
+
+.nightgl::after {
+  font-size: 0.3rem !important;
+}
+
+.moon {
+  width: 6rem;
+  height: 6rem;
+  bottom: 31% !important;
+}
+
+.moon::before {
+  width: 4rem;
+  height: 4rem;
+}
+
+.sea {
+  /* height: calc(100*0.1); */
+  bottom: 15%;
+}
+/* } */

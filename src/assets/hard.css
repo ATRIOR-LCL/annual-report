@@ -1,0 +1,162 @@
+.hard {
+  width: 90%;
+  height: 80%;
+  position: relative;
+  top: 0.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  /* background-color: red; */
+  background-color: rgb(41, 41, 41);
+  z-index: 11 !important;
+}
+
+.cnt{
+  letter-spacing: 0;
+  font-size: .7rem;
+  color: #fff;
+}
+
+.hardtxt {
+  letter-spacing: 0.1rem;
+  width: 6rem;
+  height: 0.8rem;
+  display: flex;
+  font-size: 0.35rem;
+  font-weight: 700;
+  justify-content: start;
+  align-items: start;
+  background-clip: text;
+  flex-wrap: wrap;
+  color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  position: absolute;
+  left: 1rem;
+  top: 0rem;
+  transition: all 1s ease;
+  transition-delay: 0.5s;
+  transform: translateX(-3rem);
+  opacity: 0;
+  filter: blur(0.1rem);
+}
+
+.hardtxt span:nth-child(2) {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  color: aliceblue;
+}
+
+.hard_slogan {
+  /* background-color: green; */
+  width: 4rem;
+  height: 0.3rem;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-size: 0.2rem;
+  /* font-size: .1rem; */
+  font-weight: 70;
+  display: flex;
+  color: aliceblue;
+  justify-content: start;
+  align-items: center;
+  transition: all 1s ease;
+  transition-delay: 1s;
+  transform: translateX(-3.5rem);
+  opacity: 0;
+  filter: blur(0.1rem);
+}
+
+.hard_slogan::after {
+  content: "Only if you work hard can you gain something";
+  position: absolute;
+  font-size: 0.1rem;
+  bottom: -0.2rem;
+  left: 0;
+  font-weight: 40;
+  word-wrap: none;
+}
+
+.sun {
+  width: 3rem;
+  height: 3rem;
+  background-color: orange;
+  border-radius: 50%;
+  position: relative;
+  bottom: 0.2rem;
+  right: 0.5rem;
+  z-index: 0;
+  transition: all 1s ease;
+  transition-delay: 0.8s;
+  transform: translateY(1rem);
+  opacity: 0;
+  filter: blur(0.1rem);
+}
+.hdsea {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  /* background-color: red; */
+  /* background-color: red; */
+  backdrop-filter: blur(30px);
+  z-index: 66;
+  /* background-color: rgb(41, 41, 41); */
+  /* background-color: aliceblue; */
+}
+
+/* @media screen and (max-width: 1000px){ */
+.hard {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.hardtxt {
+  width: 100%;
+  height: 2rem;
+  background-color: red;
+  font-size: 0.56rem;
+  top: 10%;
+  left: 0;
+  margin-left: 0.1rem;
+}
+
+.hard_slogan {
+  width: 10%;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  letter-spacing: 0rem;
+  /* background-color: #66a6ff; */
+  font-size: 0.4rem;
+  margin-left: 0.1rem;
+}
+
+.hard_slogan::after {
+  font-size: 0.3rem !important;
+}
+
+.sun {
+  width: 6rem;
+  height: 6rem;
+  z-index: -1;
+  bottom: 31% !important;
+}
+
+.moon::before {
+  width: 4rem;
+  height: 4rem;
+}
+
+.hdsea {
+  bottom: 15%;
+  z-index: 0;
+}
+
+.liuying {
+  width: 10%;
+  margin-left: 0.1rem;
+}
+/* } */

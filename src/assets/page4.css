@@ -1,0 +1,254 @@
+#jl {
+  position: relative;
+  width: 100vw;
+  height: 5rem;
+  font-size: 0.4rem;
+  display: flex;
+  font-weight: 700;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 9;
+}
+
+.jl1 {
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(
+    45deg,
+    #ff9a9e 0%,
+    #fad0c4 99%,
+    #fad0c4 100%
+  );
+  opacity: 0;
+  filter: blur(0.1rem);
+  transform: translateY(0.4rem);
+  transition: all 1s ease;
+  transition-delay: 0.5s;
+}
+
+.jl2 {
+  font-size: 0.5rem;
+  color: #fff;
+  filter: blur(0.1rem);
+  transform: translateX(-0.7rem);
+  transition: all 1s ease;
+  transition-delay: 2s;
+  opacity: 0;
+}
+
+.jl2box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  height: 1rem;
+  filter: blur(0.1rem);
+  transform: translateX(-0.7rem);
+  transition: all 1s ease;
+  transition-delay: 2s;
+  opacity: 0;
+  /* background-color: red; */
+}
+
+.jl2box img {
+  width: 0.5rem;
+}
+
+.cjnum {
+  width: 50%;
+  height: 1rem;
+  letter-spacing: 0.1rem;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(
+    45deg,
+    #ff9a9e 0%,
+    #fad0c4 99%,
+    #fad0c4 100%
+  );
+  opacity: 0;
+  filter: blur(0.1rem);
+  transform: translateY(0.4rem);
+  transition: all 1s ease;
+  transition-delay: 2s;
+}
+
+.cjnum span:nth-child(2) {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  letter-spacing: 0;
+  font-size: 0.5rem;
+  color: rgba(0, 0, 0, 0);
+  background-clip: text;
+  background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
+}
+
+.cjnum span:nth-child(4) {
+  color: #fff;
+}
+
+.emoji {
+  width: 120px;
+  height: 120px;
+  /* margin: 15px; */
+  background: #ffda6a;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  opacity: 0;
+  filter: blur(0.1rem);
+  transition-delay: 1s;
+  transition: all 1s ease;
+}
+
+.emoji:after {
+  position: absolute;
+  bottom: -40px;
+  font-size: 18px;
+  width: 60px;
+  left: calc(50% - 30px);
+  color: #8a8a8a;
+}
+
+.emoji__face,
+.emoji__eyebrows,
+.emoji__eyes,
+.emoji__mouth,
+.emoji__tongue,
+.emoji__heart,
+.emoji__hand,
+.emoji__thumb {
+  position: absolute;
+}
+.emoji__face:before,
+.emoji__face:after,
+.emoji__eyebrows:before,
+.emoji__eyebrows:after,
+.emoji__eyes:before,
+.emoji__eyes:after,
+.emoji__mouth:before,
+.emoji__mouth:after,
+.emoji__tongue:before,
+.emoji__tongue:after,
+.emoji__heart:before,
+.emoji__heart:after,
+.emoji__hand:before,
+.emoji__hand:after,
+.emoji__thumb:before,
+.emoji__thumb:after {
+  position: absolute;
+  content: "";
+}
+
+.emoji__face {
+  width: inherit;
+  height: inherit;
+}
+
+.emoji--yay:after {
+  content: "Yay";
+  animation: yay-reverse 1s linear infinite;
+}
+.emoji--yay .emoji__face {
+  animation: yay 1s linear infinite alternate;
+}
+.emoji--yay .emoji__eyebrows {
+  left: calc(50% - 3px);
+  top: 30px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: -6px 0 0 0 #000000, -36px 0 0 0px #000000, 6px 0 0 0 #000000,
+    36px 0 0 0px #000000;
+}
+.emoji--yay .emoji__eyebrows:before,
+.emoji--yay .emoji__eyebrows:after {
+  width: 36px;
+  height: 18px;
+  border-radius: 60px 60px 0 0;
+  background: transparent;
+  border: 6px solid black;
+  box-sizing: border-box;
+  border-bottom: 0;
+  bottom: 3px;
+  left: calc(50% - 18px);
+}
+.emoji--yay .emoji__eyebrows:before {
+  margin-left: -21px;
+}
+.emoji--yay .emoji__eyebrows:after {
+  margin-left: 21px;
+}
+.emoji--yay .emoji__mouth {
+  top: 60px;
+  background: transparent;
+  left: 50%;
+}
+.emoji--yay .emoji__mouth:after {
+  width: 80px;
+  height: 80px;
+  left: calc(50% - 40px);
+  top: -75px;
+  border-radius: 50%;
+  background: transparent;
+  border: 6px solid #000000;
+  box-sizing: border-box;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  z-index: 1;
+}
+.emoji--yay .emoji__mouth:before {
+  width: 6px;
+  height: 6px;
+  background: transparent;
+  border-radius: 50%;
+  bottom: 5px;
+  left: calc(50% - 3px);
+  box-shadow: -25px 0 0 0 #000000, 25px 0 0 0 #000000,
+    -35px -2px 30px 10px #d5234c, 35px -2px 30px 10px #d5234c;
+}
+
+@keyframes yay {
+  25% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .emoji {
+    left: 50%;
+    transform: translateX(-50%) !important;
+    top: 130%;
+    transition-delay: 2s !important;
+  }
+  #jl {
+    top: -2rem !important;
+  }
+
+  .jl1 {
+    transform: scale(1.5) !important;
+  }
+
+  .jl2box {
+    transform: scale(1.5) !important;
+  }
+
+  .cjnum {
+    transform: scale(1.6) !important;
+  }
+}

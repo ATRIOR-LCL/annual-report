@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section{
+  background-color: rgb(41, 41, 41);
+  overflow: hidden;
+}

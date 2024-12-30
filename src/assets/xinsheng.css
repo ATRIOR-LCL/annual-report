@@ -1,0 +1,55 @@
+.xinsheng {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+
+.rank{
+  letter-spacing: 0;
+  font-size: .8rem;
+}
+
+.bbb {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  opacity: 0;
+  filter: blur(0.1rem);
+  transition: all 3s ease;
+}
+
+.xshtxt {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 1s ease-in-out;
+  transform: translateX(-1rem);
+  filter: blur(0.1rem);
+  opacity: 0;
+}
+
+.xshtxt div {
+  display: inline-block;
+  font-size: 0.45rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  text-shadow: 1px 1px #c2c2c2, 2px 2px #c2c2c2, 3px 3px #c2c2c2;
+
+  font-weight: 700;
+}
+
+.xshtxt div:nth-child(2) {
+  font-size: 0.65rem;
+}

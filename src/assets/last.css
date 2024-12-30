@@ -1,0 +1,356 @@
+.sdutoj {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  justify-content: center;
+  gap: 0.2rem;
+  align-items: center;
+  user-select: none;
+}
+
+.btm-txt {
+  position: absolute;
+  width: 90%;
+  bottom: -0.2rem;
+  left: -0.2rem;
+}
+
+.font1 {
+  width: 80%;
+  height: 0.5rem;
+  font-size: 0.3rem;
+  text-align: center;
+  line-height: 0.5rem;
+  color: transparent;
+  background: linear-gradient(to right, rgb(41, 41, 41), #fff, rgb(41, 41, 41));
+  background-clip: text;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.font2 {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  /* gap: 10px; */
+  align-items: center;
+  top: 50%;
+  font-size: 0.4rem;
+  /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+  /* background-clip: text; */
+  /* color: transparent; */
+  transition: all 1s ease;
+  /* transition-delay: 8s; */
+  /* transform: translateX(-1rem); */
+  /* opacity: 0; */
+  /* filter: blur(.5rem); */
+  z-index: 99;
+  /* overflow: hidden; */
+}
+.font2 span {
+  white-space: nowrap;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 1s ease !important;
+}
+
+.font2 span:nth-last-child(1) {
+  font-size: 0.8rem;
+}
+
+/* .font2 span:nth-last-child(1){
+  font-size: .6rem;
+} */
+
+.font2anim {
+  animation: showshow 4s forwards linear;
+}
+.font2 span:nth-child(2){
+  animation-delay: 1s;
+}
+.font2 span:nth-child(3){
+  animation-delay: 2s;
+}
+.font2 span:nth-child(4){
+  animation-delay: 3s;
+}
+
+.font2 span:nth-child(5){
+  animation-delay: 4s;
+}
+.font2 span:nth-child(6){
+  animation-delay: 5s;
+}
+.font2 span:nth-child(7){
+  animation-delay: 6s;
+}
+.font2 span:nth-child(8){
+  animation-delay: 7s;
+}
+.font2 span:nth-child(9){
+  animation-delay: 9s;
+}
+
+@keyframes showshow {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30vh);
+  }
+}
+
+.font1anim {
+  animation: fontmove 1s linear forwards;
+  animation-iteration-count: 2;
+}
+
+@keyframes fontmove {
+  from {
+    opacity: 1;
+    background-position: -500%;
+  }
+  to {
+    opacity: 1;
+    background-position: 500%;
+  }
+}
+
+.chars {
+  perspective: 200px;
+  transform-style: preserve-3d;
+  position: relative;
+  font-size: 1rem;
+  color: #fff;
+  transform: scale(1.4) rotate3d(10, 10, 0, 40deg) translateZ(-0.6rem);
+  opacity: 0;
+}
+
+.charsanim {
+  animation: animate 3s linear forwards;
+}
+
+.nc {
+  perspective: 200px;
+  transform-style: preserve-3d;
+  position: relative;
+  font-size: 1rem;
+  color: #fff;
+  transform: scale(1.4) rotate3d(10, -10, 0, 40deg) translateZ(-0.6rem);
+  opacity: 0;
+}
+
+.sdutoj span {
+  z-index: 9999;
+}
+
+.sdutoj span:nth-last-child(6) {
+  animation-delay: 4s !important;
+}
+
+.sdutoj span:nth-last-child(5) {
+  animation-delay: 3s !important;
+}
+
+.sdutoj span:nth-last-child(4) {
+  animation-delay: 2s !important;
+}
+
+.sdutoj span:nth-last-child(3) {
+  animation-delay: 2s !important;
+}
+
+.sdutoj span:nth-last-child(2) {
+  animation-delay: 3s !important;
+}
+
+.sdutoj span:nth-last-child(1) {
+  animation-delay: 4s !important;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate3d(0, 0, 0, 0deg) translateZ(0);
+    text-shadow: 0 0 #c2c2c2;
+  }
+}
+
+@keyframes upmove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1rem);
+  }
+}
+
+.bottom-icon {
+  /* filter: blur(.1rem); */
+  width: 3rem;
+  height: 0.6rem;
+  /* background-color: red; */
+  position: absolute;
+  bottom: -10%;
+  display: flex;
+  justify-content: start;
+
+  align-items: center;
+  /* border-bottom: .01rem solid #eee; */
+}
+
+.bottom-icon p {
+  font-size: 0.2rem;
+  /* font-weight: 70; */
+}
+
+.bluetxt {
+  position: absolute;
+  font-size: 0.1rem;
+  color: #fff;
+  bottom: -0.08rem;
+  left: -0.3rem;
+  transform: none;
+}
+
+.atriortxt {
+  position: absolute;
+  position: absolute;
+  font-size: 0.1rem;
+  color: #fff;
+  bottom: -0.08rem;
+  left: 42%;
+  transform: none;
+}
+
+.blue {
+  position: relative;
+  right: 0.2rem;
+  margin-left: 0.1rem;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.atrior {
+  margin-left: 0.1rem;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.lcllab {
+  position: relative;
+  left: 0.3rem;
+  top: 0.04rem;
+}
+
+.wline {
+  position: relative;
+  left: 0.05rem;
+  width: 0.01rem;
+  height: 60%;
+  z-index: 99 !important;
+  background-color: #fff;
+}
+
+.chars,
+.nc {
+  font-size: 1.8rem;
+}
+
+.font1 {
+  font-size: 0.25rem !important;
+}
+
+.bottom-icon {
+  bottom: 10%;
+  transform: scale(2);
+  opacity: 0;
+}
+
+.wline {
+  width: 0.008;
+  left: 0.1rem !important;
+}
+
+@keyframes upmove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1.5rem);
+  }
+}
+
+.atrior::after,
+.blue::after {
+  content: "" !important;
+}
+
+/* From Uiverse.io by CristianMontoya98 */
+.btn {
+  position: absolute;
+  bottom: 20%;
+  /* left: 50%; */
+  width: 8rem;
+  height: 2rem;
+  background: black;
+  color: white;
+  border: none;
+  /* border-radius: 0.625em; */
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 11;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease;
+  transition-delay: 7.5s;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.btn:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}

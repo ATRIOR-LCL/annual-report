@@ -1,0 +1,280 @@
+.zqf {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  /* background-color: aliceblue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.4rem;
+  font-weight: 700;
+}
+
+.qf1 {
+  display: block;
+  width: auto;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.85rem;
+  letter-spacing: 0.1rem;
+  font-size: 0.5rem;
+  opacity: 0;
+  filter: blur(0.1rem);
+  transform: translateY(0.4rem);
+  transition: all 1s ease;
+  transition-delay: 0.5s;
+}
+
+.qf2 {
+  display: block;
+  width: auto;
+  height: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0;
+  font-size: 0.5rem;
+  filter: blur(0.1rem);
+  transform: translateX(-0.7rem);
+  transition: all 1s ease;
+  transition-delay: 2s;
+  opacity: 0;
+}
+
+.qf3 {
+  letter-spacing: 0.1rem;
+  display: block;
+  width: auto;
+  height: 0.5rem;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  filter: blur(0.1rem);
+  transform: translateY(0.4rem);
+  transition: all 1s ease;
+  transition-delay: 2s;
+}
+
+@media screen and (max-width: 1000px) {
+  .zqf {
+    top: -2rem;
+    height: 5rem !important;
+  }
+  .qf1 {
+    transform: scale(1.5) !important;
+    /* font-size: 1rem; */
+  }
+
+  .qfbox {
+    transform: scale(1.5) !important;
+  }
+
+  .qf3 {
+    transform: scale(1.6) !important;
+  }
+
+  .emoji {
+    top: 130% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    /* left: 50% !important; */
+  }
+}
+
+.emoji {
+  width: 120px;
+  height: 120px;
+  /* margin: 15px; */
+  background: #ffda6a;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  opacity: 0;
+  filter: blur(0.1rem);
+  transition: all 1s ease;
+  transition-delay: 1s;
+  transform: translateY(1rem);
+}
+
+.emoji:after {
+  position: absolute;
+  bottom: -40px;
+  font-size: 18px;
+  width: 60px;
+  left: calc(50% - 30px);
+  color: #8a8a8a;
+}
+
+.emoji__face,
+.emoji__eyebrows,
+.emoji__eyes,
+.emoji__mouth,
+.emoji__tongue,
+.emoji__heart,
+.emoji__hand,
+.emoji__thumb {
+  position: absolute;
+}
+
+.emoji__face:before,
+.emoji__face:after,
+.emoji__eyebrows:before,
+.emoji__eyebrows:after,
+.emoji__eyes:before,
+.emoji__eyes:after,
+.emoji__mouth:before,
+.emoji__mouth:after,
+.emoji__tongue:before,
+.emoji__tongue:after,
+.emoji__heart:before,
+.emoji__heart:after,
+.emoji__hand:before,
+.emoji__hand:after,
+.emoji__thumb:before,
+.emoji__thumb:after {
+  position: absolute;
+  content: "";
+}
+
+.emoji__face {
+  width: inherit;
+  height: inherit;
+}
+
+.emoji--wow:after {
+  content: "Wow";
+}
+
+.emoji--wow .emoji__face {
+  animation: wow-face 3s linear infinite;
+}
+
+.emoji--wow .emoji__eyebrows {
+  left: calc(50% - 3px);
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: -18px 0 0 0 #000000, -33px 0 0 0 #000000, 18px 0 0 0 #000000,
+    33px 0 0 0 #000000;
+  animation: wow-brow 3s linear infinite;
+}
+
+.emoji--wow .emoji__eyebrows:before,
+.emoji--wow .emoji__eyebrows:after {
+  width: 24px;
+  height: 20px;
+  border: 6px solid #000000;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  top: -3px;
+  left: calc(50% - 12px);
+}
+
+.emoji--wow .emoji__eyebrows:before {
+  margin-left: -25px;
+}
+
+.emoji--wow .emoji__eyebrows:after {
+  margin-left: 25px;
+}
+
+.emoji--wow .emoji__eyes {
+  width: 16px;
+  height: 24px;
+  left: calc(50% - 8px);
+  top: 35px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 25px 0 0 0 #000000, -25px 0 0 0 #000000;
+}
+
+.emoji--wow .emoji__mouth {
+  width: 30px;
+  height: 45px;
+  left: calc(50% - 15px);
+  top: 50%;
+  border-radius: 50%;
+  background: #000000;
+  animation: wow-mouth 3s linear infinite;
+}
+
+@keyframes wow-face {
+  15%,
+  25% {
+    transform: rotate(20deg) translateX(-25px);
+  }
+  45%,
+  65% {
+    transform: rotate(-20deg) translateX(25px);
+  }
+  75%,
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+@keyframes wow-brow {
+  15%,
+  65% {
+    top: 25px;
+  }
+  75%,
+  100%,
+  0% {
+    top: 15px;
+  }
+}
+@keyframes wow-mouth {
+  10%,
+  30% {
+    width: 20px;
+    height: 20px;
+    left: calc(50% - 10px);
+  }
+  50%,
+  70% {
+    width: 30px;
+    height: 40px;
+    left: calc(50% - 15px);
+  }
+  75%,
+  100% {
+    height: 50px;
+  }
+}
+
+.qfbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  height: 1rem;
+  /* background-color: red; */
+  filter: blur(0.1rem);
+  transform: translateX(-0.6rem);
+  color: #fff;
+  /* color: rgba(0, 0, 0, 0);
+    background-clip: text;
+    background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%); */
+  transition: all 1s ease;
+  transition-delay: 2s;
+  opacity: 0;
+}
+
+.qfbox img {
+  width: 0.5rem;
+}

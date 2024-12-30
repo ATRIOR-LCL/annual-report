@@ -1,0 +1,159 @@
+.blu {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.bg-slide,
+.bg-slide .circle,
+.bg-slide .circle img,
+.circle-dark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 2s ease;
+  transition-delay: 1s;
+}
+.bg-slide .circle.bg img {
+  object-fit: cover;
+  transform: rotate(0) scale(2);
+}
+
+.txt1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  top: 10%;
+  z-index: 44;
+}
+.txt3-a,
+.txt2-a,
+.txt1-a {
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 0.4rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+  background-clip: text;
+  color: transparent;
+  transform: translateY(1rem);
+  filter: blur(0.1rem);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.txt1-a span,
+.txt1-b span,
+.txt1-c span,
+.txt2-a span,
+.txt3-b span {
+  background-image: linear-gradient(
+    120deg,
+    #89f7fe 0%,
+    #66a6ff 100%
+  ) !important;
+  background-clip: text;
+  color: transparent !important;
+}
+
+.txt2-a span,
+.txt1-b span,
+.txt1-a span{
+  font-size: .7rem;
+}
+
+
+.txt3-b,
+.txt2-b,
+.txt1-b {
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+  background-clip: text;
+  color: transparent;
+  transform: translateY(1rem);
+  filter: blur(0.1rem);
+  opacity: 0;
+  transition: all 1s ease;
+}
+.txt3-c,
+.txt2-c,
+.txt1-c {
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+  background-clip: text;
+  color: transparent;
+  transform: translateY(1rem);
+  filter: blur(0.1rem);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.large,
+.circle-dark {
+  z-index: 2;
+  clip-path: circle(50% at 50% 50%);
+  transition: all 2.5s ease;
+  transition-delay: 0.5s !important;
+}
+
+.small {
+  z-index: 3;
+  clip-path: circle(40% at 50% 50%);
+  transition: all 2s ease;
+  transition-delay: 0.1s !important;
+}
+
+.circle-dark {
+  background-color: rgba(0, 0, 0, 0.04);
+}

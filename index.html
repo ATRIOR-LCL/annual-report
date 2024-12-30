@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/all.css" />
+    <link rel="shortcut icon" href="./src/assets/img/favicon.ico" />
+    <title>SDUT OJ Annual Report</title>
+    <style>
+      body {
+        font-family: "Varela Round";
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-image: url('./src/assets/img/sdutacm_bg_desktop.jpg');
+        background-size: cover;
+        z-index: -3;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      const app = document.querySelector("#app");
+      app.style.width = 10 + "rem";
+      app.style.position = "relative";
+      const useRem = () => {
+        let w = window.innerWidth;
+        if (w > 400) w /= 40;
+        else w /= 10;
+        let size = w + "px";
+        document.documentElement.style.fontSize = size;
+      };
+      window.addEventListener("resize", useRem);
+      useRem();
+    </script>
+  </body>
+</html>

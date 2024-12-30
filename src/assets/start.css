@@ -1,0 +1,447 @@
+.back {
+  position: absolute;
+  left: 0.1rem;
+  top: 0.1rem;
+  width: 4rem;
+  height: 2rem;
+  border: 0;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  justify-content: space-around;
+  background-color: transparent;
+  z-index: 99999;
+  /* border-bottom: .1rem solid #fff; */
+}
+
+.qr {
+  display: inline-block;
+  background-color: red;
+  position: absolute;
+  right: -80%;
+  top: 30%;
+}
+
+.qr img {
+  position: absolute;
+  width: 20%;
+  top: 2%;
+  left: 5%;
+  transform: translateZ(-10px);
+  z-index: 0;
+}
+.qr p {
+  position: absolute;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  font-size: 0.2rem !important;
+  left: 30%;
+  top: 5%;
+  text-align: center;
+}
+.back span {
+  border-bottom: 0.1rem solid #fff;
+}
+
+.back img {
+  height: 1rem;
+}
+
+.start {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tongyi {
+  display: inline-block;
+  height: auto;
+  display: flex;
+  position: absolute;
+  /* top: .3rem; */
+  bottom: 10%;
+  align-items: center;
+}
+
+.tongyi p {
+  font-size: 0.3rem;
+  color: #fff;
+  margin-left: 0.2rem;
+}
+/* From Uiverse.io by 0xnihilism */
+.brutalist-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 169px;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border: 3px solid #fff;
+  outline: 3px solid #000;
+  box-shadow: 6px 6px 0 #00a4ef;
+  transition: all 0.1s ease-out;
+  padding: 0 15px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 20%;
+  overflow: hidden;
+}
+
+.brutalist-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+  z-index: 1;
+  transition: none;
+  /* Initially hide the pseudo-element */
+  opacity: 0;
+}
+
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.brutalist-button:hover::before {
+  /* Show the pseudo-element on hover */
+  opacity: 1;
+  animation: slide 2s infinite;
+}
+
+.brutalist-button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0 #000;
+  background-color: #000;
+  color: #fff;
+}
+
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.brutalist-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0 #00a4ef;
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+/* Rest of the CSS remains the same */
+
+.brutalist-button:hover .ms-logo {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.brutalist-button:active .ms-logo {
+  transform: rotate(10deg) scale(0.9);
+}
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  transition: transform 0.2s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.brutalist-button:hover .button-text {
+  transform: skew(-5deg);
+}
+
+.brutalist-button:active .button-text {
+  transform: skew(5deg);
+}
+
+.button-text span:first-child {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.button-text span:last-child {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.sdutoj {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  height: 11%;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+  background-clip: text;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: transparent;
+  font-weight: 700;
+}
+
+.ndbg {
+  position: absolute;
+  top: 26%;
+  display: inline-block;
+  /* width: 100%; */
+  height: 11%;
+  text-wrap: no-wrap;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+  background-clip: text;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  z-index: 9999;
+}
+
+/* From Uiverse.io by StealthWorm */
+.loader {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  z-index: 11;
+}
+
+.blackhole {
+  z-index: -1;
+  display: flex;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.blackhole-circle {
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    black 25%,
+    white 35%,
+    white 100%
+  );
+  box-shadow: 0px 0px 2rem #c2babb;
+  align-items: center;
+  justify-content: center;
+}
+
+.blackhole-circle::after {
+  z-index: 0;
+  position: absolute;
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid white;
+  background: radial-gradient(
+    circle at center,
+    black 35%,
+    white 60%,
+    white 100%
+  );
+  box-shadow: 0px 0px 5rem #c2babb;
+  align-items: center;
+  justify-content: center;
+  filter: blur(4px);
+  /* animation: pulseAnimation linear infinite 2s alternate-reverse; */
+}
+
+.blackhole-circle::before {
+  z-index: 1;
+  content: "";
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid #ffffff;
+  box-shadow: 3px 3px 10px #c2babb, inset 0 0 1rem #ffffff;
+  border-radius: 50%;
+  top: 5rem;
+  filter: blur(0.5px);
+  /* animation: rotate linear infinite 3s; */
+}
+
+.blackhole-disc {
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  width: 3rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    #ffffff 80%,
+    #353535 90%,
+    white 100%
+  );
+  filter: blur(0.7rem) brightness(130%);
+  border: 1rem solid white;
+  box-shadow: 0px 0px 3rem #d7c4be;
+  transform: rotate3d(1, 1, 1, 220deg);
+  /* animation: pulseAnimation2 linear infinite 2s alternate-reverse; */
+  justify-content: center;
+  align-items: center;
+}
+
+.blackhole-disc::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    #ffffff 80%,
+    #353535 90%,
+    white 100%
+  );
+  filter: blur(3rem);
+  border: 1rem solid white;
+  box-shadow: 0px 0px 6rem #d7c4be;
+  /* animation: pulseAnimation linear infinite 2s alternate-reverse; */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseAnimation {
+  0% {
+    box-shadow: 0px 0px 3rem #c2babb;
+    transform: scale(1);
+  }
+
+  100% {
+    box-shadow: 0px 0px 5rem #c2babb;
+    transform: scale(1.09);
+  }
+}
+
+@keyframes pulseAnimation2 {
+  0% {
+    box-shadow: 0px 0px 3rem #c2babb;
+    transform: rotate3d(1, 1, 1, 220deg) scale(1);
+  }
+
+  100% {
+    box-shadow: 0px 0px 5rem #c2babb;
+    transform: rotate3d(1, 1, 1, 220deg) scale(0.95);
+  }
+}
+
+/* From Uiverse.io by qhns3 */
+.card {
+  position: absolute;
+  width: 190px;
+  height: 254px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 200px;
+  height: 264px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.card p:not(.heading) {
+  font-size: 14px;
+}
+
+.card p:last-child {
+  color: #e81cff;
+  font-weight: 600;
+}
+
+.card:hover::after {
+  filter: blur(30px);
+}
+
+.card:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
