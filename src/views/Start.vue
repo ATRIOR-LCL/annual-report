@@ -32,7 +32,7 @@
         </div>
       </button>
       <div class="tongyi">
-        <input type="checkbox" class="ui-checkbox" v-model="isChecked" />
+        <input type="checkbox" class="ui-checkbox" :checked="isChecked" v-model="isChecked" />
         <p>同意SDUTOJ统计我的数据</p>
       </div>
     </div>
@@ -45,7 +45,7 @@ import { userid, avatar, global, liuyang } from "@/assets/global";
 import { gogo } from "@/assets/global";
 import { useRouter } from "vue-router";
 import req from "@/utils/req";
-const isChecked = ref(false);
+const isChecked = ref(true);
 const router = useRouter();
 axios.defaults.baseURL = "/onlinejudge3/api/";
 // userid = String(userid)
