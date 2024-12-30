@@ -76,7 +76,7 @@ const Logout = async () => {
 import { contain } from "@/assets/global";
 import axios from "axios";
 
-if (window.screen.width > 1000) {t
+if (window.screen.width > 1000) {
   contain.value = true;
 } else {
   contain.value = false;
