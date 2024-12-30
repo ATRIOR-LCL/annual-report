@@ -23,7 +23,7 @@ let newUser = global.value.userCountAnnual;
 let newSubmit = global.value.solutionCountAnnual;
 let allUser = global.value.userCount;
 let allSubmit = global.value.solutionCount;
-allSubmit = allSubmit.toLocaleString();
+allSubmit = allSubmit.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 import { onMounted } from "vue";
 import { can, isnext, isScoll } from "@/assets/global";
 
