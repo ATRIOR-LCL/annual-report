@@ -90,7 +90,7 @@ const Going = async () => {
       const selfres = await req.post("/getSelfStaticObject", {
         key: `oj-annual-2024-user-${userid.value}`,
       });
-      global.value = globalres;
+      global.value = globalres.content;
       console.log(selfres)
       liuyang.value = selfres.content;
       // console.log(liuyang.value)
