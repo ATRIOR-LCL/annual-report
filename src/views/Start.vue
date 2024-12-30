@@ -40,7 +40,7 @@
 </template>
 
 <script setup>
-import { nextTick, ref } from "vue";
+import { nextTick, onMounted, ref } from "vue";
 import { userid, avatar, global, liuyang } from "@/assets/global";
 import { gogo } from "@/assets/global";
 import { useRouter } from "vue-router";
@@ -48,6 +48,18 @@ import req from "@/utils/req";
 const isChecked = ref(false);
 const router = useRouter();
 axios.defaults.baseURL = "/onlinejudge3/api/";
+// userid = String(userid)
+onMounted(async () => {
+  const getres = await req.get("/getSession");
+  if (getres) {
+    console.log("hei");
+    userid.value = String(getres.userId);
+    // userid.value = getres.data["userId"];
+    router.push({ name: "main" });
+  } else {
+    router.push({ name: "login" });
+  }
+});
 
 const Logout = async () => {
   try {
@@ -74,12 +86,15 @@ const Going = async () => {
         key: "oj-annual-2024-global",
       });
       const selfres = await req.post("/getSelfStaticObject", {
-        key: `oj-annual-2024-user-${userid}`,
+        key: `oj-annual-2024-user-${userid.value}`,
       });
-      global.value=globalres
-      liuyang.value=selfres
+      global.value = globalres;
+      console.log(selfres)
+      liuyang.value = selfres.content;
+      // console.log(liuyang.value)
+      gogo.value = false;
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   } else {
     alert("iii");

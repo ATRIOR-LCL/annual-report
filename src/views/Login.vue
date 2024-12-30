@@ -36,38 +36,32 @@ import { useRouter } from "vue-router";
 import { avatar, userid } from "@/assets/global";
 const userData = ref(null);
 import req from "@/utils/req";
-const errinfo = ref(null)
+const errinfo = ref(null);
 const userinfo = ref({
   loginName: "",
   password: "",
 });
-const router = useRouter()
+const router = useRouter();
 axios.defaults.baseURL = "/onlinejudge3/api/";
-const getres = await req.get('/getSession')
-if(getres){
-  console.log('hei')
-  router.push({name:'main'})
-}else{
-  router.push({name:'login'})
-}
+
 const userLogin = async () => {
   try {
     const res = await req.post(`/login`, {
       loginName: userinfo.value.loginName,
       password: userinfo.value.password,
-    })
-    console.log(res)
-    if(res){
-      console.log('yes')
-      userid.value=res.userid
-      avatar.value=res.avatar
-      router.push({name: 'main'})
-    }
+    });
+    // await getSession();
+    console.log(res);
+    console.log("yes");
+    userid.value = String(res.userId);
+    console.log(res.userId);
+    avatar.value = res.avatar;
+    router.push({ name: "main" });
   } catch (e) {
-    if(e.code){
-      errinfo.value=e.msg
-    }else{
-      errinfo.value=e.message
+    if (e.code) {
+      errinfo.value = e.msg;
+    } else {
+      errinfo.value = e.message;
     }
   }
 };
