@@ -2,7 +2,7 @@
   <section>
     <div id="login">
       <p class="oj">SDUT OJ</p>
-      <form class="form-control" action="" @submit.prevent="userLogin">
+      <form class="form-control" action="" @submit.prevent="userLogin" >
         <p class="title">Login</p>
         <div class="input-field">
           <input
@@ -23,7 +23,7 @@
           <label class="label" for="input">Password</label>
         </div>
         <div class="errorinfo">{{ errinfo }}</div>
-        <button class="submit-btn" type="submit" name="submit">SUBMIT</button>
+        <button class="submit-btn" type="submit" name="submit" @touchstart="userLogin">SUBMIT</button>
       </form>
     </div>
   </section>

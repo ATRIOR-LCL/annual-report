@@ -19,7 +19,7 @@
         <img src="../assets/img/qq.png" alt="" />
         <span>Come Back</span>
       </button>
-      <button class="brutalist-button" @click="Going">
+      <button class="brutalist-button" @click="Going" @touchstart="Going">
         <div class="ms-logo">
           <img
             src="../assets/img/sdutacm_logo_colorful-02a05aa9.svg"
