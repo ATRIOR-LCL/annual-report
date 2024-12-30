@@ -15,11 +15,11 @@
           <div class="blackhole-disc"></div>
         </div>
       </div>
-      <router-link to="/onlinejudge3/annual-report-2024/login" class="back">
+      <button class="back" @click="Logout">
         <img src="../assets/img/qq.png" alt="" />
         <span>Come Back</span>
-      </router-link>
-      <button class="brutalist-button" :disabled="!isChecked" @click="Going">
+      </button>
+      <button class="brutalist-button" @click="Going">
         <div class="ms-logo">
           <img
             src="../assets/img/sdutacm_logo_colorful-02a05aa9.svg"
@@ -41,23 +41,50 @@
 
 <script setup>
 import { nextTick, ref } from "vue";
-import { userid, avatar } from "@/assets/global";
+import { userid, avatar, global, liuyang } from "@/assets/global";
 import { gogo } from "@/assets/global";
+import { useRouter } from "vue-router";
 import req from "@/utils/req";
 const isChecked = ref(false);
+const router = useRouter();
+axios.defaults.baseURL = "/onlinejudge3/api/";
 
+const Logout = async () => {
+  try {
+    const res = await req.post("/logout");
+    console.log(res);
+    router.push({ name: "login" });
+  } catch (e) {
+    console.log(e);
+  }
+};
 
 import { contain } from "@/assets/global";
+import axios from "axios";
+
 if (window.screen.width > 1000) {
   contain.value = true;
 } else {
   contain.value = false;
 }
-function Going() {
-  setTimeout(() => {
-    gogo.value = false;
-  }, 800);
-}
+const Going = async () => {
+  if (isChecked) {
+    try {
+      const globalres = await req.post("/getStaticObject", {
+        key: "oj-annual-2024-global",
+      });
+      const selfres = await req.post("/getSelfStaticObject", {
+        key: `oj-annual-2024-user-${userid}`,
+      });
+      global.value=globalres
+      liuyang.value=selfres
+    } catch (e) {
+      console.log(e)
+    }
+  } else {
+    alert("iii");
+  }
+};
 </script>
 
 <style scoped>

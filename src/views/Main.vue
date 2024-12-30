@@ -1,12 +1,14 @@
 <template>
-        <Start v-if="gogo"></Start>
-        <Message v-if="!gogo"></Message>
+  <Suspense>
+    <Start v-if="gogo"></Start>
+  </Suspense>
+  <Message v-if="!gogo"></Message>
 </template>
 
 <script setup>
-import Start from './Start.vue';
-import Message from './Message.vue';
-import { gogo } from '@/assets/global';
+import Start from "./Start.vue";
+import Message from "./Message.vue";
+import { gogo } from "@/assets/global";
 </script>
 
 <style scoped>
@@ -21,8 +23,8 @@ import { gogo } from '@/assets/global';
 }
 
 .defa-enter-from,
-.defa-leave-to{
-    transition: all 0.5s ease;
-    transition-delay: .5s;
+.defa-leave-to {
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
 }
 </style>

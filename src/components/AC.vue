@@ -3,19 +3,35 @@
     <div class="ac">
       <div class="actest">
         <div class="gongac">
-          你总共在OJ上AC了<span>{{ total_ac }}</span>道题目<span>🥴</span>
+          你总共在OJ上AC了<span>{{ total_ac }}</span
+          >道题目<span>🥴</span>
         </div>
-        <div class="xinac">其中，<span>{{ new_ac }}</span>道是今年新AC的题目</div>
-        <div class="sts">你的刷题数<span>{{ ss }}</span>,超过了OJ <span>{{over}}%</span>的用户</div>
+        <div class="xinac" v-if="isactive">
+          其中，<span>{{ new_ac }}</span
+          >道是今年新AC的题目
+        </div>
+        <div class="sts" v-if="isactive">
+          你的刷题数<span>{{ ss }}</span
+          >,超过了OJ <span>{{ over }}%</span>的用户
+        </div>
       </div>
       <div class="acstar">
         <div class="stzx">
           <img src="../assets/img/qq.png" alt="" />
-          <span class="rank2">译翼飞鸾</span>
+          <span class="rank2"
+            >{{ top2Name }}
+            <span class="rank2ac">{{ top2Ac }}</span>
+          </span>
           <img src="../assets/img/qq.png" alt="" />
-          <span class="rank1">旺旺碎冰冰</span>
+          <span class="rank1"
+            >{{ top1Name }}
+            <span class="rank1ac">{{ top1Ac }}</span>
+          </span>
           <img src="../assets/img/qq.png" alt="" />
-          <span class="rank3">jsj张存源</span>
+          <span class="rank3"
+            >{{ top3Name }}
+            <span class="rank3ac">{{ top3Ac }}</span>
+          </span>
         </div>
         <div class="pyramid-loader">
           <div class="wrapper">
@@ -36,21 +52,28 @@
 <script setup>
 import { can, isnext, isScoll } from "@/assets/global";
 import { ref, onMounted } from "vue";
-import { liuyang } from "@/assets/global";
+import { liuyang, global } from "@/assets/global";
+let top1Name = global.value.annualACTopStandings[0].nickname;
+let top1Ac = global.value.annualACTopStandings[0].accrpted;
+let top2Name = global.value.annualACTopStandings[0].nickname;
+let top2Ac = global.value.annualACTopStandings[0].accrpted;
+let top3Name = global.value.annualACTopStandings[0].nickname;
+let top3Ac = global.value.annualACTopStandings[0].accrpted;
+let isactive = liuyang.value.annualActive;
 const star1 = ref(null);
 const star2 = ref(null);
 const star3 = ref(null);
-let total_ac = liuyang.value.accepted
-let new_ac = liuyang.value.annualNewAccepted
-const ss = ref('')
-if(new_ac>=200){
-  ss.value='傲立群雄'
-}else if(new_ac>=50&&new_ac<200){
-  ss.value='小有成就'
-}else{
-  ss.value='中规中矩'
+let total_ac = liuyang.value.accepted;
+let new_ac = liuyang.value.annualNewAccepted;
+const ss = ref("");
+if (new_ac >= 200) {
+  ss.value = "傲立群雄";
+} else if (new_ac >= 50 && new_ac < 200) {
+  ss.value = "小有成就";
+} else {
+  ss.value = "中规中矩";
 }
-let over = Math.floor(100*(1-liuyang.value.annualNewAcceptedTopPercent))
+let over = Math.floor(100 * (1 - liuyang.value.annualNewAcceptedTopPercent));
 
 onMounted(() => {
   const txtanim = new IntersectionObserver((lists) => {

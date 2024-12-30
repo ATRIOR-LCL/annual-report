@@ -2,18 +2,28 @@
   <section>
     <div class="xinzeng">
       <p class="yh">
-        <span>这一年里OJ迎来了</span><span class="yhnum">2052</span
+        <span>这一年里OJ迎来了</span><span class="yhnum">{{ newUser }}</span
         ><span>名新用户!</span>
+        <span class="nzc">总注册用户数已逾{{allUser}}人</span>
       </p>
       <p class="tj">
-        <span>这一年里OJ新增了</span><span class="tjnum">175371</span
+        <span>这一年里OJ新增了</span><span class="tjnum">{{ newSubmit }}</span
         ><span>条提交!</span>
+        <span class="ntj"
+          >截止目前,已累计{{allSubmit}}条提交,即将达到1000万大关</span
+        >
       </p>
     </div>
   </section>
 </template>
 
 <script setup>
+import { global } from "@/assets/global";
+let newUser = global.value.userCountAnnual;
+let newSubmit = global.value.solutionCountAnnual;
+let allUser = global.value.userCount;
+let allSubmit = global.value.solutionCount;
+allSubmit = allSubmit.toLocaleString();
 import { onMounted } from "vue";
 import { can, isnext, isScoll } from "@/assets/global";
 
@@ -36,9 +46,7 @@ onMounted(() => {
     { threshold: 0.5 }
   );
 
-  const page2font = document.querySelectorAll(
-    ".yh, .tj"
-  );
+  const page2font = document.querySelectorAll(".yh, .tj");
   page2font.forEach((page2font) => page2anim.observe(page2font));
 });
 </script>

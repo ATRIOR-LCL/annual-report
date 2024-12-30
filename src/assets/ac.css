@@ -238,24 +238,21 @@
   justify-content: center;
 }
 
-.rank1::after {
-  content: "252";
+.rank1ac {
   position: absolute;
   font-size: 0.5rem;
   transform: translateX(-50%);
   top: 120%;
 }
 
-.rank2::after {
-  content: "242";
+.rank2ac {
   position: absolute;
   font-size: 0.5rem;
   transform: translateX(-50%);
   top: 120%;
 }
 
-.rank3::after {
-  content: "232";
+.rank3ac {
   position: absolute;
   font-size: 0.5rem;
   transform: translateX(-50%);

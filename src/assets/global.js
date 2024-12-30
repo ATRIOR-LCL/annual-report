@@ -8,6 +8,7 @@ export const isScoll = ref(false);
 export const userid = ref(null);
 export const avatar = ref(null);
 export const days = ref(0)
+
 export const liuyang = ref({
   userId: 70521,
   username: "ewj12",
@@ -136,3 +137,5 @@ export const liuyang = ref({
     sdutpmc16th: null,
   },
 });
+
+export const global = ref(null)

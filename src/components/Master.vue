@@ -8,12 +8,12 @@
             src="../assets/img/qq.png"
             alt=""
             class="msimg"
-          /><span>凌乱之风</span>
+          /><span>{{ master }}</span>
         </div>
-        <div class="mstxt3">已经达成了<span>42</span>项成就</div>
-        <div class="mstxt4">距离<span>52</span>项全成就仅有一步之遥</div>
+        <div class="mstxt3">已经达成了<span>{{ masterNum }}</span>项成就</div>
+        <div class="mstxt4">距离<span>{{ globalAchiveNum }}</span>项全成就仅有一步之遥</div>
         <div class="mstxt5">在所有成就中，最稀有的成就是<span>{{ title }}</span></div>
-        <div class="mstxt6">仅有<span>1</span>人达成</div>
+        <div class="mstxt6">仅有<span>{{ rareNum }}</span>人达成</div>
       </div>
       <div class="cards">
         <div class="outlinePage">
@@ -57,7 +57,7 @@
           <p class="ranking_number">1<span class="ranking_word">st</span></p>
           <div class="splitLine"></div>
           <img src="../assets/img/qq.png" alt="" class="mmm" />
-          <p class="userName">凌乱之风</p>
+          <p class="userName">{{ master }}</p>
         </div>
         <div class="detailPage">
           <svg
@@ -150,7 +150,7 @@
               ></path>
             </svg>
             <p class="gradesBoxLabel">AMOUNT</p>
-            <p class="gradesBoxNum">42</p>
+            <p class="gradesBoxNum">{{ masterNum }}</p>
           </div>
         </div>
       </div>
@@ -162,9 +162,17 @@
 import { can, isnext, isScoll } from "@/assets/global";
 import { ref, onMounted } from "vue";
 import achivements from "@/configs/achivement-config";
+import { global } from "@/assets/global";
+
+let master = global.value.achievementTopUsers[0]
+let masterNum = global.value.achievementTopUsers[0].achievements.length
+let globalAchiveNum = global.value.achievementNum
+let rare = global.value.topRareAchievements[0].achievementKey
+let rareNum = global.value.topRareAchievements[0].count
+
 let title = ref(null)
 achivements.forEach(achiv=>{
-  if(achiv.achievementKey === 'RatingLv2')
+  if(achiv.achievementKey === rare)
     title.value=achiv.title
 })
 onMounted(() => {

@@ -45,6 +45,7 @@ const router = useRouter()
 axios.defaults.baseURL = "/onlinejudge3/api/";
 const getres = await req.get('/getSession')
 if(getres){
+  console.log('hei')
   router.push({name:'main'})
 }else{
   router.push({name:'login'})
