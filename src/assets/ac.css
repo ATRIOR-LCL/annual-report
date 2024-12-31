@@ -239,6 +239,7 @@
 .rank1,
 .rank2,
 .rank3{
+  white-space: nowrap;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,9 +249,11 @@
 }
 
 .rank1{
+  font-size: .6rem;
   color:  #c39824;
 }
 .rank2{
+  font-size: .5rem;
   margin-top: .5rem;
   /* margin-top: .7rem; */
   color: #adadad;
