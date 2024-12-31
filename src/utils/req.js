@@ -1,6 +1,10 @@
 import Cookies from 'js-cookie';
 import Axios from 'axios';
 
+if (typeof window === 'undefined') {
+  window.Cookies = Cookies;
+}
+
 const req = Axios.create({
   baseURL: '/onlinejudge3/api',
   timeout: 60 * 1000,
