@@ -126,7 +126,7 @@
                 <!-- <p>90%</p> -->
               </div>
               <div class="ac-num">
-                <div class="rating">
+                <div class="rating" v-if="showRating">
                   Rating 
                   <span
                     class="rating-color"
@@ -190,6 +190,10 @@ import { days, avatar, liuyang } from "@/assets/global";
 let allAc = liuyang.value.accepted;
 let newAc = liuyang.value.annualNewAccepted;
 let userRating = liuyang.value.rating;
+const showRating = ref(true)
+if(userRating === 0){
+  showRating.value=false
+}
 let userAchieve = liuyang.value.achievements.length;
 let username = liuyang.value.username
 import { ref, onMounted, nextTick } from "vue";

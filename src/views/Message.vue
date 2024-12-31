@@ -89,7 +89,7 @@ if(liuyang.value.nightWalker){
 }
 import Hard from "../components/Hard.vue";
 const hasMaxTries = ref(false)
-if(liuyang.value.maxTries.count>=5){
+if(liuyang.value.maxTries&&liuyang.value.maxTries.count>=5){
   hasMaxTries.value=true
 }
 import Last from "../components/Last.vue";
