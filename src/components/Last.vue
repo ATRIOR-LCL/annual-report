@@ -2,7 +2,7 @@
   <section v-if="generate">
     <div class="font2">
       <span class="font2-txt">时至今日，</span>
-      <span class="font2-txt">我们的旅程已经开始了{{days}}天。</span>
+      <span class="font2-txt">我们的旅程已经开始了{{ days }}天。</span>
       <span class="font2-txt">看似一眨眼的时间，</span>
       <span class="font2-txt">却承载了我们无可忘却的珍重回忆。</span>
       <span class="font2-txt">以这份回忆的重量所编织的纽带，</span>
@@ -66,11 +66,14 @@
       <span class="icon2"></span>
     </button>
     <div class="sumarry" ref="sumarry">
+      <span class="scanner">扫码查看 2024 专属年度报告</span>
       <lay-qrcode
-          :width="70"
-          class="sum-qr"
-          text="https://oj-annual-report.vercel.app/"
-        ></lay-qrcode>
+        :width="78"
+        :backgroundColor="'#ffffff00'"
+        class="sum-qr"
+        text="https://acm.sdut.edu.cn/onlinejudge3/annual-report-2024"
+        style="background-color: transparent"
+      ></lay-qrcode>
       <img
         src="../assets/img/sdutacm_logo_colorful-02a05aa9.svg"
         alt=""
@@ -78,7 +81,6 @@
       />
 
       <div class="results-summary-container">
-        
         <div class="Iconfetti">
           <div class="confetti-piece"></div>
           <div class="confetti-piece"></div>
@@ -101,53 +103,94 @@
           <div class="confetti-piece"></div>
         </div>
         <div class="results-summary-container__result">
-          <div class="heading-tertiary">我的OJ年报<span>🥳</span></div>
+          <div class="heading-tertiary">
+            我的 SDUT OJ 2024 年报<span>🥳</span>
+          </div>
           <div class="result-box">
-            <img src="../assets/img/qq.png" alt="" />
+            <img
+              :src="`https://cdn.sdutacm.cn/oj/image/avatars/${avatar}`"
+              alt=""
+            />
           </div>
           <div class="result-text-box">
             <div class="heading-secondary">ATRIOR</div>
             <div class="paragraph">
               <div class="ac-num">
-                <p>总AC:<span>1111</span></p>
-                <p>今年AC:<span>234</span></p>
+                <p>
+                  总 AC <span>{{ allAc }}</span>
+                </p>
+                <p>
+                  今年 AC <span>{{ newAc }}</span>
+                </p>
                 <!-- <p>90%</p> -->
               </div>
               <div class="ac-num">
                 <div class="rating">
-                  Rating:<span class="rating-color">1900</span>
+                  Rating 
+                  <span
+                    class="rating-color"
+                    :style="{
+                      color:
+                        userRating >= -1000 && userRating < 1200
+                          ? '#969696'
+                          : userRating >= 1200 && userRating < 1400
+                          ? '#28C438'
+                          : userRating >= 1400 && userRating < 1600
+                          ? '#0099FF'
+                          : userRating >= 1600 && userRating < 1900
+                          ? '#C600FF'
+                          : userRating >= 1900 && userRating < 2200
+                          ? '#FF8212'
+                          : userRating >= 2200 && userRating < 2500
+                          ? '#F8BF29'
+                          : userRating >= 2500 && userRating < 8000
+                          ? '#FB0007'
+                          : '',
+                    }"
+                  >
+                    {{ userRating }}
+                  </span>
                 </div>
-                <div class="achiv-num">总成就数:<span>89</span></div>
+
+                <div class="achiv-num">
+                  总成就数 <span>{{ userAchieve }}</span>
+                </div>
               </div>
-              <div class="contests">
+              <div class="contests" v-if="haveContest">
                 <li
                   v-for="(item, index) in contests"
                   :key="index"
                   class="bisai"
                 >
-                  <span>{{ item.name }}</span>
-                  <span>{{ item.rank }}</span>
+                  <span>{{ item.title }}</span>
+                  <span>{{ item.awardStr }}</span>
                 </li>
               </div>
             </div>
           </div>
-        </div>
-        <div class="results-summary-container__options">
-          <div class="tag-head">2024回忆标签✨️</div>
+          <div class="results-summary-container__options">
+          <div class="tag-head">2024 回忆标签✨️</div>
           <ul class="summary-result-options">
             <li v-for="(item, index) in tags" :key="index" class="tag">
               {{ item }}
             </li>
           </ul>
-          <div class="topoj">SDUT Online Judge</div>
         </div>
+        </div>
+        
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { days } from "@/assets/global";
+import { days, avatar, liuyang } from "@/assets/global";
+
+let allAc = liuyang.value.accepted;
+let newAc = liuyang.value.annualNewAccepted;
+let userRating = liuyang.value.rating;
+let userAchieve = liuyang.value.achievements.length;
+
 import { ref, onMounted, nextTick } from "vue";
 import html2canvas from "html2canvas";
 import QRCode from "qrcode";
@@ -277,7 +320,7 @@ const generateQRCode = async (text) => {
       margin: 1, // 控制二维码的边距
       color: {
         dark: "#000000", // 二维码的颜色
-        light: "#ffffff", // 背景颜色
+        light: "#ffffff00", // 背景颜色
       },
     });
     return qrCodeDataUrl;
@@ -288,7 +331,9 @@ const generateQRCode = async (text) => {
 const downloadAsImage = async () => {
   if (sumarry.value) {
     try {
-      const qrCodeDataUrl = await generateQRCode("http://localhost:5173/");
+      const qrCodeDataUrl = await generateQRCode(
+        "https://acm.sdut.edu.cn/onlinejudge3/annual-report-2024"
+      );
       html2canvas(sumarry.value, {
         useCORS: true, // 启用跨域支持
         scale: 2, // 提升图片分辨率
@@ -328,33 +373,82 @@ const downloadAsImage = async () => {
 };
 
 const sumarry = ref(null);
+
 const tags = ref([
-  "刷题王",
-  "夜猫子",
-  "百折不挠",
-  "原神启动!",
-  "校赛明星",
-  "新星",
-  "队伍的羁绊",
+  '刷题王',
+  '夜猫子',
+  '百折不挠',
+  '原神启动',
+  '校赛见证者',
+  // '初升新星',
+  '队伍的羁绊'
 ]);
+
+// if (liuyang.value.annualNewAccepted >= 100) {
+//   tags.value.push("刷题王");
+// }
+// if (liuyang.value.nightWalker) {
+//   tags.value.push("夜猫子");
+// }
+// if (liuyang.value.maxTries) {
+//   tags.value.push("百折不挠");
+// }
+// if (liuyang.value.competition.asGenshin) {
+//   tags.value.push("原神启动!");
+// }
+// if (liuyang.value.competition.sdutpc16) {
+//   tags.value.push("校赛见证者");
+// }
+// if (liuyang.value.competition.sdutnc6th) {
+//   tags.value.push("初升新星");
+// }
+// if (liuyang.value.competition.sdutpmc16th) {
+//   tags.value.push("队伍的羁绊");
+// }
+
 const contests = ref([
-  {
-    name: "擂台赛",
-    rank: 12,
-  },
-  {
-    name: "新生赛",
-    rank: 12,
-  },
-  {
-    name: "校赛",
-    rank: 12,
-  },
-  // {
-  //   name: "原神赛",
-  //   rank: 12,
-  // },
-]);
+      {
+        "key": "sdutncc6th",
+        "title": "第六届新生争霸赛",
+        "unofficialParticipation": false,
+        "rank": {
+          "user": {
+            "userId": 75333,
+            "nickname": "AK之神"
+          },
+          "score": 1,
+          "time": 1280,
+          "rank": 39,
+          "rawRank": 39
+        },
+        "rankStr": "第 39 名",
+        "awardStr": "铜奖",
+        "medal": "bronze"
+      },
+      {
+        "key": "sdutpmc16th",
+        "title": "第十六擂台赛",
+        "unofficialParticipation": false,
+        "rank": {
+          "user": {
+            "userId": 75727,
+            "nickname": "尧家军"
+          },
+          "score": 2,
+          "time": 10708,
+          "rank": 42,
+          "rawRank": 49
+        },
+        "rankStr": "第 42 名",
+        "awardStr": "第 42 名",
+        "medal": null
+      }
+    ]);
+const haveContest = ref(true)
+if (liuyang.value.competition.attendedCompetitionCount > 0) {
+  haveContest.value=true
+  // contests.value = liuyang.value.competition.attendedCompetitions;
+}
 </script>
 <style scoped>
 @import url("../assets/sumarry.css");

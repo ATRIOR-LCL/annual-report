@@ -1,6 +1,6 @@
 .hard {
-  width: 90%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   position: relative;
   top: 0.5rem;
   display: flex;
@@ -20,7 +20,7 @@
 .hardtxt {
   letter-spacing: 0.1rem;
   width: 6rem;
-  height: 0.8rem;
+  height: 15% !important;
   display: flex;
   font-size: 0.35rem;
   font-weight: 700;
@@ -38,6 +38,7 @@
   transform: translateX(-3rem);
   opacity: 0;
   filter: blur(0.1rem);
+  z-index: 111;
 }
 
 .hardtxt span:nth-child(2) {
@@ -52,7 +53,7 @@
   height: 0.3rem;
   position: absolute;
   left: 1rem;
-  top: 1rem;
+  top: 25% !important;
   font-size: 0.2rem;
   /* font-size: .1rem; */
   font-weight: 70;
@@ -65,16 +66,6 @@
   transform: translateX(-3.5rem);
   opacity: 0;
   filter: blur(0.1rem);
-}
-
-.hard_slogan::after {
-  content: "Only if you work hard can you gain something";
-  position: absolute;
-  font-size: 0.1rem;
-  bottom: -0.2rem;
-  left: 0;
-  font-weight: 40;
-  word-wrap: none;
 }
 
 .sun {

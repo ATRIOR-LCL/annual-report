@@ -5,10 +5,10 @@
         <div class="mstxt1">纵观整个OJ</div>
         <div class="mstxt2">
           <span>最强成就大师</span><img
-            src="../assets/img/qq.png"
+            :src="`https://cdn.sdutacm.cn/oj/image/avatars/${masterAvatar}`"
             alt=""
             class="msimg"
-          /><span>{{ master }}</span>
+          /><span class="masterName">{{ master }}</span>
         </div>
         <div class="mstxt3">已经达成了<span>{{ masterNum }}</span>项成就</div>
         <div class="mstxt4">距离<span>{{ globalAchiveNum }}</span>项全成就仅有一步之遥</div>
@@ -56,7 +56,7 @@
           </svg>
           <p class="ranking_number">1<span class="ranking_word">st</span></p>
           <div class="splitLine"></div>
-          <img src="../assets/img/qq.png" alt="" class="mmm" />
+          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${masterAvatar}`" alt="" class="mmm" />
           <p class="userName">{{ master }}</p>
         </div>
         <div class="detailPage">
@@ -159,17 +159,18 @@
 </template>
 
 <script setup>
-import { can, isnext, isScoll } from "@/assets/global";
+import { avatar, can, isnext, isScoll } from "@/assets/global";
 import { ref, onMounted } from "vue";
 import achivements from "@/configs/achivement-config";
 import { global } from "@/assets/global";
 
-let master = global.value.achievementTopUsers[0]
+let master = global.value.achievementTopUsers[0].nickname
 let masterNum = global.value.achievementTopUsers[0].achievements.length
 let globalAchiveNum = global.value.achievementNum
 let rare = global.value.topRareAchievements[0].achievementKey
 let rareNum = global.value.topRareAchievements[0].count
-
+let masterAvatar = global.value.achievementTopUsers[0].avatar
+console.log(masterAvatar)
 let title = ref(null)
 achivements.forEach(achiv=>{
   if(achiv.achievementKey === rare)

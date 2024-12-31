@@ -74,8 +74,8 @@
   width: 8rem;
   height: 0.3rem;
   font-weight: 70;
-  font-size: 0.2rem;
-  bottom: -0.25rem;
+  font-size: 0.3rem;
+  bottom: -0.6rem;
   justify-content: center;
   align-items: center;
   color: #fff;
@@ -84,13 +84,14 @@
 
 .ntj {
   position: absolute;
+  text-align: center;
   display: flex;
   width: 8rem;
   height: 0.3rem;
   /* background-color: red; */
   font-weight: 70;
-  font-size: 0.2rem;
-  bottom: -0.2rem;
+  font-size: 0.3rem;
+  bottom: -0.8rem;
   justify-content: center;
   align-items: center;
   color: #fff;

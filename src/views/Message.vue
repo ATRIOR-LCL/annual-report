@@ -6,7 +6,9 @@
     class="next"
     :class="{ nextactive: isnext }"
   />
-  <section id="page1" class="page ">
+  <Last id="pae15" class="page"></Last>
+
+  <!-- <section id="page1" class="page ">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -60,7 +62,7 @@
       <div class="jiyu2"></div>
       <div class="jiyu" id="jiyu1"></div>
     </div>
-  </section>
+  </section> -->
   <Special id="page2" class="page hide"></Special>
   
   <XinZeng id="page3" class="page hide"></XinZeng>
@@ -75,7 +77,6 @@
   <Blue id="page12" class="page hide" v-if="hasBlue"></Blue>
   <AchivementStar id="page13" class="page hide" v-if="hasAchive"></AchivementStar>
   <Master id="page14" class="page hide"></Master>
-  <Last id="pae15" class="page hide"></Last>
 
 
   <section style="z-index: -1"></section>
