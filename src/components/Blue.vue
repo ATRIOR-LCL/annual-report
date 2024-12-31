@@ -3,13 +3,13 @@
     <div class="blu">
       <div class="bg-slide" style="z-index: 3">
         <div class="txt1">
-          <div class="txt1-a">在<span>2月3日</span>，一个临近年关的日子</div>
+          <div class="txt1-a">在 <span>2 月 3 日</span>，一个临近年关的日子</div>
           <div class="txt1-b">
-            <span>{{ cnt }}</span
+            <span>&nbsp;{{ cnt }}&nbsp;</span
             >名兴趣相投的旅行者<br />和你一同参加了<br />
-            SDUT OJ历史上最特别的比赛
+            SDUT OJ 历史上最特别的比赛
           </div>
-          <div class="txt1-c">蔚蓝系列赛Round 2：原神主题赛</div>
+          <div class="txt1-c">蔚蓝系列赛 Round 2：原神主题赛</div>
         </div>
         <div class="circle bg" ref="bg1">
           <div class="mask" style="z-index: 3"></div>

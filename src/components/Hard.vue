@@ -2,11 +2,11 @@
   <section>
     <div class="hard">
       <div class="hardtxt">
-        <span>还记得</span><br><span>{{ maxtries }}</span><br><span>这道题吗，</span
-        ><span>你提交了整整<span class="cnt">{{ cnt }}</span>次才过</span>
+        <span>还记得</span><br><span>{{ maxtries }}</span><br><span>这道题吗？</span
+        ><span>你提交了整整 <span class="cnt">{{ cnt }}</span> 次才过</span>
       </div>
       <div class="hard_slogan">
-        那份喜悦背后的坚韧,一定也陪你走到了今天
+        那份喜悦背后的坚韧，一定也陪你走到了今天
         <!-- <img src="../assets/img/liuyinh.webp" alt="" class="liuying" /> -->
       </div>
       <div class="hdsea"></div>

@@ -3,7 +3,7 @@
     <div class="newcontest">
       <div class="ncttxt">
         <p class="saishi">
-          这一年里OJ共举办了<br />
+          这一年里，OJ 共举办了<br />
           <span class="newct">{{ newct }}</span>场<br />中大型正式赛事<span>😲</span>
         </p>
         <p class="bipin">

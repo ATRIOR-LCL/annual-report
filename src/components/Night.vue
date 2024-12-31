@@ -5,7 +5,7 @@
         与星同行的你<span>{{ night }}</span>还在做题<span>😴</span>
       </div>
       <div class="nightgl">
-        这是独属于你的不眠之夜
+        这是属于你的不眠之夜
         <div class="haiyou" v-if="hastogether">在这一晚，还有{{haiyou}}名用户和你一样在夜色中遨想星河</div>
         <!-- <img class="sticker" src="../assets/img/sticker.png" alt="" /> -->
       </div>
@@ -22,7 +22,7 @@ import { liuyang } from "@/assets/global";
 const hastogether = ref(false)
 const first = ref(true);
 let night = liuyang.value.nightWalker.timeStr
-night = night.slice(-8, -3)
+// night = night.slice(-8, -3)
 let haiyou = null
 if(liuyang.value.nightWalker.togetherUserCount>0){
   hastogether.value=true

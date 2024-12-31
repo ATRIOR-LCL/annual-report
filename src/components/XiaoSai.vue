@@ -2,9 +2,9 @@
   <section>
     <div class="xiaosai">
       <div class="xstxt1">
-        <div class="txt1">在<span>5</span>月<span>12</span>日<br>你参加了紧张刺激的<span>第十六届校赛</span></div>
-        <div class="txt2">你与<span>{{ co }}</span>名选手<br>以及<span>{{ small }}</span>名中小学生同台竞技</div>
-        <div class="txt3">并拿下了<span>{{ cj }}</span>的好成绩</div>
+        <div class="txt1">在 <span>5</span> 月 <span>12</span> 日<br>你参加了紧张刺激的 <span>第十六届校赛</span></div>
+        <div class="txt2">你与 <span>{{ co }}</span> 名选手<br>以及 <span>{{ small }}</span> 名中小学生同台竞技</div>
+        <div class="txt3">并拿下了 <span>{{ cj }}</span> 的好成绩</div>
       </div>
       <div class="xstxt2">
         <div>这届校赛中</div>
@@ -12,7 +12,7 @@
         <div>
           <span>「高能滚榜」</span>与<span>「闭幕式节目」</span>首次亮相
         </div>
-        <div>为这场盛会增添了更多精彩<span>🥳</span></div>
+        <div>为这场盛会增添了更多精彩 <span>🥳</span></div>
       </div>
       <div class="container">
         <div class="bubble">

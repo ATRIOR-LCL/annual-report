@@ -7,8 +7,8 @@
     </div> -->
 
     <div class="start">
-      <div class="sdutoj">SDUTOJ</div>
-      <div class="ndbg">2024年度报告</div>
+      <div class="sdutoj">SDUT OJ</div>
+      <div class="ndbg">2024 年度报告</div>
       <div class="loader">
         <div class="blackhole">
           <div class="blackhole-circle"></div>
@@ -50,7 +50,7 @@
           :checked="isChecked"
           v-model="isChecked"
         />
-        <p>同意SDUTOJ统计我的数据</p>
+        <p>同意使用我的账号数据统计</p>
       </div>
     </div>
   </section>

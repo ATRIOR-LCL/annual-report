@@ -3,14 +3,14 @@
     <div class="ac">
       <div class="actest">
         <div class="gongac">
-          你总共在OJ上AC了 <span>{{ total_ac }}</span> 道题目<span>🥴</span>
+          你 AC 了 <span>{{ total_ac }}</span> 道题目<span>🥴</span>
         </div>
         <div class="xinac" v-if="isactive">
-          其中， <span>{{ new_ac }}</span> 道是今年新AC的题目
+          其中，<span>{{ new_ac }}</span> 道是今年新 AC 的题目
         </div>
         <div class="sts" v-if="isactive">
           你的刷题数<span>{{ ss }}</span
-          >超过了OJ<span>{{ over }}%</span>的用户
+          >超过了 OJ <span>{{ over }}%</span>的用户
         </div>
       </div>
       <div class="acstar">

@@ -19,7 +19,7 @@
 
       </span>
     </div>
-    <button class="btn" @click="gosum">点击生成你的专属OJ年报🥳</button>
+    <button class="btn" @click="gosum">点击生成你的专属 OJ 年报 🥳</button>
     <div class="sdutoj">
       <div class="font1">
         Practice coding, compete with players, and become a master.
@@ -126,12 +126,12 @@
             <div class="paragraph">
               <div class="ac-num">
                 <p>
-                  总 AC <span>{{ allAc }}</span>
+                  总计 AC <span>{{ allAc }}</span>
                 </p>
                 <p>
-                  今年 AC <span>{{ newAc }}</span>
+                  年度 AC <span>{{ newAc }}</span>
                 </p>
-                <p class="percent">Top{{ percent }}%</p>
+                <p class="percent">Top {{ percent }}%</p>
               </div>
               <div class="ac-num">
                 <div class="rating" v-if="showRating">
@@ -178,7 +178,7 @@
             </div>
           </div>
           <div class="results-summary-container__options">
-            <div class="tag-head">2024 回忆标签✨️</div>
+            <div class="tag-head">2024 回忆标签 ✨️</div>
             <ul class="summary-result-options">
               <li v-for="(item, index) in tags" :key="index" class="tag">
                 {{ item }}
