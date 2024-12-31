@@ -2,8 +2,8 @@
   <section>
     <div class="card qr">
       <img src="../assets/img/qq.png" alt="" />
-      <p>~ 推荐使用微信扫码<br />获取最佳体验</p>
-      <lay-qrcode text="https://oj-annual-report.vercel.app/"></lay-qrcode>
+      <p>~ 推荐使用QQ微信扫码<br />获取最佳体验</p>
+      <lay-qrcode text="https://acm.sdut.edu.cn/onlinejudge3/annual-report-2024"></lay-qrcode>
     </div>
 
     <div class="start">
