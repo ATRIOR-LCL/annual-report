@@ -3,12 +3,10 @@
     <div class="ac">
       <div class="actest">
         <div class="gongac">
-          你总共在OJ上AC了 <span>{{ total_ac }}</span
-          > 道题目<span>🥴</span>
+          你总共在OJ上AC了 <span>{{ total_ac }}</span> 道题目<span>🥴</span>
         </div>
         <div class="xinac" v-if="isactive">
-          其中， <span>{{ new_ac }}</span
-          > 道是今年新AC的题目
+          其中， <span>{{ new_ac }}</span> 道是今年新AC的题目
         </div>
         <div class="sts" v-if="isactive">
           你的刷题数<span>{{ ss }}</span
@@ -17,22 +15,19 @@
       </div>
       <div class="acstar">
         <div class="stzx">
-          <span class="rank2"
-            >
-          <img src="../assets/img/qq.png" alt="" style="border-radius: 50%;" />
-          {{ top2Name }}
+          <span class="rank2">
+            <img src="../assets/img/qq.png" alt="" style="border-radius: 50%" />
+            {{ top2Name }}
             <span class="rank2ac">{{ top2Ac }}</span>
           </span>
-          <span class="rank1"
-            >
-          <img src="../assets/img/qq.png" alt="" style="border-radius: 50%;"/>
-          {{ top1Name }}
+          <span class="rank1">
+            <img src="../assets/img/qq.png" alt="" style="border-radius: 50%" />
+            {{ top1Name }}
             <span class="rank1ac">{{ top1Ac }}</span>
           </span>
-          <span class="rank3"
-            >
-          <img src="../assets/img/qq.png" alt="" style="border-radius: 50%;" />
-          {{ top3Name }}
+          <span class="rank3">
+            <img src="../assets/img/qq.png" alt="" style="border-radius: 50%" />
+            {{ top3Name }}
             <span class="rank3ac">{{ top3Ac }}</span>
           </span>
         </div>

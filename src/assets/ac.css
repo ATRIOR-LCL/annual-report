@@ -265,21 +265,25 @@
   position: absolute;
   font-size: 0.5rem;
   /* transform: translateX(-50%); */
-  top: 90%;
+  bottom: -10%;
 }
 
 .rank2ac {
   position: absolute;
   font-size: 0.5rem;
   /* transform: translateX(-50%); */
-  top: 85%;
+  /* top: 85%; */
+  bottom: -30%;
+
 }
 
 .rank3ac {
   position: absolute;
   font-size: 0.5rem;
   /* transform: translateX(-50%); */
-  top: 120%;
+  /* top: 120%; */
+  bottom: -50%;
+
 }
 
 .pyramid-loader {

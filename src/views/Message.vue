@@ -1,16 +1,13 @@
 <template>
   <p class="title fontremove">SDUT Online Judge</p>
-  <img src="../assets/img/music_playing.svg" alt="">
-  <img src="../assets/img/music_shutoff.svg" alt="">
   <img
     src="../assets/img/up.svg"
     alt=""
     class="next"
     :class="{ nextactive: isnext }"
   />
-  <AC id="page5" class="page "></AC>
 
-  <!-- <section id="page1" class="page ">
+  <section id="page1" class="page ">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -64,10 +61,11 @@
       <div class="jiyu2"></div>
       <div class="jiyu" id="jiyu1"></div>
     </div>
-  </section> -->
+  </section>
   <Special id="page2" class="page hide"></Special>
   <XinZeng id="page3" class="page hide"></XinZeng>
   <NewContest id="page4" class="page hide"></NewContest>
+  <AC id="page5" class="page hide"></AC>
   
   <Night id="page6" class="page hide" v-if="hasNight"></Night>
   <Hard id="page7" class="page hide" v-if="hasMaxTries"></Hard>
