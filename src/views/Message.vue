@@ -8,9 +8,8 @@
   />
   <!--  -->
   
-  <Last id="pae15" class="page "></Last>
 
-  <section id="page1" class="page hide">
+  <section id="page1" class="page">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -80,6 +79,7 @@
   <AchivementStar id="page13" class="page hide" v-if="hasAchive"></AchivementStar>
 
   <Master id="page14" class="page hide"></Master>
+  <Last id="pae15" class="page hide"></Last>
 
 
   <section style="z-index: -1"></section>
