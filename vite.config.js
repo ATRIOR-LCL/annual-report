@@ -11,6 +11,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  server: {
+    host: '127.0.0.1',
+  },
   experimental: {
     renderBuiltUrl(filename) {
       let cdnUrl = process.env.CDN_URL || '/onlinejudge3/annual-report-2024';

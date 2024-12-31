@@ -1,5 +1,5 @@
 <template>
-  <p class="title fontremove">SDUT Online Judge</p>
+  <p class="title fontremove">SDUT OJ 2024 年度报告</p>
   <img
     src="../assets/img/up.svg"
     alt=""
@@ -51,15 +51,15 @@
       <div class="kmc fontremove">
         <div class="hei">
           <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${liuyang.avatar}`" alt="" style="border-radius: 50%;" />
-          <span>{{liuyang.username}}</span>
+          <span>{{liuyang.username}}，</span>
         </div>
-        欢迎回家！在这一年里， SDUTOJ 发生了许多新的故事，其中也有属于你的篇章。
+        欢迎回家！在这一年里， SDUT OJ 发生了许多新的故事，其中也有属于你的篇章。
         <span
           >我们迫不及待地邀请你一起回望时间的起点，再次见证那些有你陪伴的好时光。</span
         >
-        <div class="kmc-oj">----SDUTOJ</div>
+        <div class="kmc-oj">bLue，SDUT OJ 主理人</div>
       </div>
-      <p class="ts" v-if="tsxx">您有一份来自SDUTOJ的信件😊</p>
+      <p class="ts" v-if="tsxx">你有一封 SDUT OJ 的来信</p>
       <div class="jiyu2"></div>
       <div class="jiyu" id="jiyu1"></div>
     </div>
@@ -73,7 +73,7 @@
   <Hard id="page7" class="page hide" v-if="hasMaxTries"></Hard>
   <BiSai id="page8" class="page hide" v-if="hascontest"></BiSai>
   <Blue id="page9" class="page hide" v-if="hasBlue" ></Blue>
-  
+
   <XiaoSai id="page10" class="page hide" v-if="hasXiaoSai"></XiaoSai>
   <XinSheng id="page11" class="page hide" v-if="ncc"></XinSheng>
 

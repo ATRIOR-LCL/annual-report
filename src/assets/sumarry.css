@@ -118,10 +118,10 @@
     color: #4fb24f;
   }
   .percent{
-    font-size: .35rem !important;
+    font-size: .3rem !important;
     font-weight: 70;
     position: absolute !important;
-    right: -35% !important;
+    right: -34.5% !important;
   }
 }
 .ac-num p:nth-child(3),
@@ -182,9 +182,7 @@
   text-transform: capitalize;
   font-weight: 700 !important;
   font-size: 0.6rem;
-}
-.heading-tertiary {
-  /* letter-spacing: 0.1rem; */
+  margin-bottom: 0.4rem;
 }
 .heading-secondary {
   font-size: 0.5rem !important;

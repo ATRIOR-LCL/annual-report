@@ -457,6 +457,7 @@
   letter-spacing: 0;
   bottom: 0;
   right: 5%;
+  font-size: 0.25rem;
 }
 
 .ts {
@@ -465,7 +466,7 @@
   /* top: 0%; */
   bottom: 35%;
   color: gray;
-  font-size: 0.3rem;
+  font-size: 0.4rem;
   font-weight: 700;
   /* position: relative !important; */
   /* top: .2rem !important; */

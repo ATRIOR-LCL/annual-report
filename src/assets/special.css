@@ -36,7 +36,7 @@
 }
 
 .spl1 span:nth-child(1) {
-  margin-right: .1rem;
+  margin-right: .15rem;
   font-size: 0.7rem;
   letter-spacing: 0;
   color: #fff;
@@ -153,7 +153,7 @@
   transition-delay: 3s;
   span{
     margin-left: .1rem;
-    margin-right: .1rem;
+    margin-right: .15rem;
     display: inline-block;
     letter-spacing: 0;
   }

@@ -2,9 +2,9 @@
   <section>
     <div class="bisai">
       <div class="bstxt">
-        <div class="bstxt1">今年你一共参加了<span>{{ contestnum }}</span>场比赛</div>
+        <div class="bstxt1">今年你一共参加了 <span>{{ contestnum }}</span> 场比赛</div>
         <div class="bstxt2">
-          在<span>{{ best }}</span>中<br />你取得了<span>{{ achiv }}</span>的年度最好成绩<span
+          在 <span>{{ best }}</span> 中<br />你取得了 <span>{{ achiv }}</span> 的年度最好成绩<span
             >💯</span
           ><br />可喜可贺，可喜可贺<span>🥳</span>
         </div>

@@ -7,16 +7,16 @@
           <div class="eyes"></div>
         </div>
         <div ref="bili2" class="bili2"></div>
-        <div class="bigoj">SDUT OJ</div>
+        <div class="bigoj">初 · 遇</div>
         <img src="../assets/img/codesmall.svg" alt="" class="codesmall" />
         <img src="../assets/img/code.svg" alt="" class="code" />
       </div>
       <p class="spl1">
         <span>{{ date }} </span
-        ><span>是个特殊的日子。</span>
+        ><span>是个特殊的日子</span>
       </p>
-      <p class="spl2">在这一天，注定不平凡的你，</p>
-      <p class="spl4">开始了与<span>SDUTOJ</span>的不期而遇。</p>
+      <p class="spl2">在这一天，注定不平凡的你</p>
+      <p class="spl4">开始了与<span>SDUT OJ</span>的不期而遇</p>
       <!-- <p class="spl3">
         <span>时至今日,我们的旅程已经开始了</span><span class="sec">{{ sec }}</span
         ><span>天</span>
