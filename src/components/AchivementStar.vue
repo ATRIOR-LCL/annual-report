@@ -126,21 +126,21 @@ onMounted(() => {
         lists.forEach((list) => {
           if (list.isIntersecting) {
             hangs.forEach((hang) => {
-              cnt++
+              console.log(cnt);
+              cnt++;
               const cnt1 = maxn;
               const cnt2 = -maxn * 3;
-              hang.style.setProperty("--cnt1", `${cnt1}px`);
-              hang.style.setProperty("--cnt2", `${cnt2}px`);
-              console.log(`--cnt1: ${cnt1}px, --cnt2: ${cnt2}px`);
+              // console.log(`--cnt1: ${cnt1}px, --cnt2: ${cnt2}px`);
               // console.log(maxn);
-              setTimeout(() => {
-                if(cnt%2 != 0){
-                  hang.classList.add("gun");
-                }
-                else {
-                  hang.classList.add('gun2')
-                }
-              }, 100);
+              if (cnt % 2 != 0) {
+                hang.style.setProperty("--cnt1", `${cnt1}px`);
+                hang.style.setProperty("--cnt2", `${cnt2}px`);
+                hang.classList.add("gun");
+              } else {
+                hang.style.setProperty("--cnt1", `${cnt1}px`);
+                hang.style.setProperty("--cnt2", `${cnt2}px`);
+                hang.classList.add("gun2");
+              }
             });
             setTimeout(() => {
               can.value = true;
