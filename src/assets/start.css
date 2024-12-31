@@ -126,6 +126,11 @@
   position: absolute;
   bottom: 20%;
   overflow: hidden;
+  &:disabled{
+    pointer-events: none;
+    z-index: 0;
+    opacity: .7;
+  }
 }
 
 .brutalist-button::before {

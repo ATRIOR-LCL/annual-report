@@ -17,10 +17,10 @@
       </p>
       <p class="spl2">在这一天，注定不平凡的你，</p>
       <p class="spl4">开始了与<span>SDUTOJ</span>的不期而遇。</p>
-      <p class="spl3">
+      <!-- <p class="spl3">
         <span>时至今日,我们的旅程已经开始了</span><span class="sec">{{ sec }}</span
         ><span>天</span>
-      </p>
+      </p> -->
     </div>
   </section>
 </template>

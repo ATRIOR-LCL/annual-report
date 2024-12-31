@@ -7,7 +7,7 @@
       <div class="nightgl">
         这是独属于你的不眠之夜
         <div class="haiyou" v-if="hastogether">在这一晚，还有{{haiyou}}名用户和你一样在夜色中遨想星河</div>
-        <img class="sticker" src="../assets/img/sticker.png" alt="" />
+        <!-- <img class="sticker" src="../assets/img/sticker.png" alt="" /> -->
       </div>
       <div class="moon"></div>
       <div class="sea"></div>

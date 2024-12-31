@@ -41,10 +41,10 @@
                 xmlns="http://www.w3.org/2000/svg"
                 :fill="
                   item.level == 1
-                    ? '#c39824'
+                    ? '#b77750'
                     : item.level == 2
                     ? '#adadad'
-                    : '#b77750'
+                    : '#c39824'
                 "
               >
                 <path

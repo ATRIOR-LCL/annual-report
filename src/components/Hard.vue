@@ -7,7 +7,7 @@
       </div>
       <div class="hard_slogan">
         那份喜悦背后的坚韧,一定也陪你走到了今天
-        <img src="../assets/img/liuyinh.webp" alt="" class="liuying" />
+        <!-- <img src="../assets/img/liuyinh.webp" alt="" class="liuying" /> -->
       </div>
       <div class="hdsea"></div>
       <div class="sun"></div>

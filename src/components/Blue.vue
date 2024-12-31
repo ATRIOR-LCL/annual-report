@@ -10,7 +10,7 @@
             <span>{{ cnt }}</span>名兴趣相投的旅行者<br>和你一同参加了<br />
             SDUT OJ历史上最特别的比赛
           </div>
-          <div class="txt1-c">蔚蓝系列赛<span>Round 2：原神主题赛</span></div>
+          <div class="txt1-c">蔚蓝系列赛Round 2：原神主题赛</div>
         </div>
         <div class="circle bg" ref="bg1">
           <img src="../assets/img/image1.jpg" alt="" />

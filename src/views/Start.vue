@@ -31,7 +31,7 @@
           <span>切换账号</span>
         </button>
       </div>
-      <button class="brutalist-button" @click="Going" @touchstart="Going">
+      <button class="brutalist-button" @click="Going" @touchstart="Going" :disabled="!isChecked">
         <div class="ms-logo">
           <img
             src="../assets/img/sdutacm_logo_colorful-02a05aa9.svg"
