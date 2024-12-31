@@ -114,7 +114,9 @@ const Going = async () => {
       console.log(selfres);
       liuyang.value = selfres.content;
       // console.log(liuyang.value)
-      gogo.value = false;
+      setTimeout(() => {
+        gogo.value = false;
+      }, 1000);
     } catch (e) {
       console.log(e);
     }

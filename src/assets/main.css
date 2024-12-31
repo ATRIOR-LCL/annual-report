@@ -412,11 +412,12 @@
   width: auto;
   height: auto;
   font-size: 0.3rem;
+  line-height: .7rem;
   font-weight: 700;
   transition: all 1.5s ease;
   transition-delay: 2.5s;
   z-index: 33;
-  letter-spacing: 0.1rem;
+  /* letter-spacing: 0.1rem; */
   border-radius: 0.3rem;
   border: 0.07rem solid gray;
   text-indent: 2em;
@@ -453,8 +454,9 @@
 .kmc-oj {
   display: inline-block;
   position: absolute;
+  letter-spacing: 0;
   bottom: 0;
-  right: 0;
+  right: 5%;
 }
 
 .ts {

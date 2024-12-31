@@ -4,13 +4,13 @@
       <p class="yh">
         <span>这一年里OJ迎来了</span><span class="yhnum">{{ newUser }}</span
         ><span>名新用户!</span>
-        <span class="nzc">总注册用户数已逾{{allUser}}人</span>
+        <span class="nzc">总注册用户数已逾 <p>{{allUser}}</p> 人</span>
       </p>
       <p class="tj">
         <span>这一年里OJ新增了</span><span class="tjnum">{{ newSubmit }}</span
         ><span>条提交!</span>
         <span class="ntj"
-          >截止目前,已累计{{allSubmit}}条提交<br>即将达到1000万大关!</span
+          >截止目前,已累计 <p>{{allSubmit}}</p> 条提交，即将达到1000万大关!</span
         >
       </p>
     </div>

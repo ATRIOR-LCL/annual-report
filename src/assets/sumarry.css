@@ -108,6 +108,9 @@
   p {
     text-align: start;
     width: 50%;
+    span{
+      margin-left: 0.2rem;
+    }
   }
   span {
     color: #4fb24f;

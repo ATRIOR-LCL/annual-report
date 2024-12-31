@@ -50,7 +50,7 @@
     </div>
   </section>
   <section v-else class="summ">
-    <button class="Btn">
+    <!-- <button class="Btn">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="1em"
@@ -64,7 +64,7 @@
         ></path>
       </svg>
       <span class="icon2"></span>
-    </button>
+    </button> -->
     <div class="sumarry" ref="sumarry">
       <span class="scanner">扫码查看 2024 专属年度报告</span>
       <lay-qrcode
@@ -376,79 +376,36 @@ const downloadAsImage = async () => {
 const sumarry = ref(null);
 
 const tags = ref([
-  '刷题王',
-  '夜猫子',
-  '百折不挠',
-  '原神启动',
-  '校赛见证者',
-  // '初升新星',
-  '队伍的羁绊'
 ]);
 
-// if (liuyang.value.annualNewAccepted >= 100) {
-//   tags.value.push("刷题王");
-// }
-// if (liuyang.value.nightWalker) {
-//   tags.value.push("夜猫子");
-// }
-// if (liuyang.value.maxTries) {
-//   tags.value.push("百折不挠");
-// }
-// if (liuyang.value.competition.asGenshin) {
-//   tags.value.push("原神启动!");
-// }
-// if (liuyang.value.competition.sdutpc16) {
-//   tags.value.push("校赛见证者");
-// }
-// if (liuyang.value.competition.sdutnc6th) {
-//   tags.value.push("初升新星");
-// }
-// if (liuyang.value.competition.sdutpmc16th) {
-//   tags.value.push("队伍的羁绊");
-// }
+if (liuyang.value.annualNewAccepted >= 100) {
+  tags.value.push("刷题王");
+}
+if (liuyang.value.nightWalker) {
+  tags.value.push("夜猫子");
+}
+if (liuyang.value.maxTries) {
+  tags.value.push("百折不挠");
+}
+if (liuyang.value.competition.asGenshin) {
+  tags.value.push("原神启动!");
+}
+if (liuyang.value.competition.sdutpc16) {
+  tags.value.push("校赛见证者");
+}
+if (liuyang.value.competition.sdutnc6th) {
+  tags.value.push("初升新星");
+}
+if (liuyang.value.competition.sdutpmc16th) {
+  tags.value.push("队伍的羁绊");
+}
 
 const contests = ref([
-      {
-        "key": "sdutncc6th",
-        "title": "第六届新生争霸赛",
-        "unofficialParticipation": false,
-        "rank": {
-          "user": {
-            "userId": 75333,
-            "nickname": "AK之神"
-          },
-          "score": 1,
-          "time": 1280,
-          "rank": 39,
-          "rawRank": 39
-        },
-        "rankStr": "第 39 名",
-        "awardStr": "铜奖",
-        "medal": "bronze"
-      },
-      {
-        "key": "sdutpmc16th",
-        "title": "第十六擂台赛",
-        "unofficialParticipation": false,
-        "rank": {
-          "user": {
-            "userId": 75727,
-            "nickname": "尧家军"
-          },
-          "score": 2,
-          "time": 10708,
-          "rank": 42,
-          "rawRank": 49
-        },
-        "rankStr": "第 42 名",
-        "awardStr": "第 42 名",
-        "medal": null
-      }
     ]);
-const haveContest = ref(true)
+const haveContest = ref(false)
 if (liuyang.value.competition.attendedCompetitionCount > 0) {
   haveContest.value=true
-  // contests.value = liuyang.value.competition.attendedCompetitions;
+  contests.value = liuyang.value.competition.attendedCompetitions;
 }
 </script>
 <style scoped>

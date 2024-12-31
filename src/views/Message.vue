@@ -6,9 +6,8 @@
     class="next"
     :class="{ nextactive: isnext }"
   />
-  <AC id="page5" class="page "></AC>
 
-  <!-- <section id="page1" class="page ">
+  <section id="page1" class="page ">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -49,10 +48,10 @@
     <div class="lt_txt" :class="{ upp: isClick }">
       <div class="kmc fontremove">
         <div class="hei">
-          <img src="../assets/img/qq.png" alt="" />
-          <span>atrior</span>
+          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${liuyang.avatar}`" alt="" />
+          <span>{{liuyang.username}}</span>
         </div>
-        欢迎回家！在这一年里，SDUTOJ发生了许多新的故事，其中也有属于你的篇章。
+        欢迎回家！在这一年里， SDUTOJ 发生了许多新的故事，其中也有属于你的篇章。
         <span
           >我们迫不及待地邀请你一起回望时间的起点，再次见证那些有你陪伴的好时光。</span
         >
@@ -62,11 +61,12 @@
       <div class="jiyu2"></div>
       <div class="jiyu" id="jiyu1"></div>
     </div>
-  </section> -->
+  </section>
   <Special id="page2" class="page hide"></Special>
-  
   <XinZeng id="page3" class="page hide"></XinZeng>
+  
   <NewContest id="page4" class="page hide"></NewContest>
+  <AC id="page5" class="page hide"></AC>
   <Night id="page6" class="page hide" v-if="hasNight"></Night>
   <Hard id="page7" class="page hide" v-if="hasMaxTries"></Hard>
   <BiSai id="page8" class="page hide" v-if="hascontest"></BiSai>

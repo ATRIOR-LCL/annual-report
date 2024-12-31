@@ -3,7 +3,7 @@
     <div class="special">
       <div class="splanimall">
         <div ref="bili1" class="bili1">
-          <p class="bili1txt">SDUT ACM</p>
+          <p class="bili1txt">SDUTACM</p>
           <div class="eyes"></div>
         </div>
         <div ref="bili2" class="bili2"></div>
@@ -12,13 +12,13 @@
         <img src="../assets/img/code.svg" alt="" class="code" />
       </div>
       <p class="spl1">
-        <span>{{ date }}</span
+        <span>{{ date }} </span
         ><span>是个特殊的日子。</span>
       </p>
       <p class="spl2">在这一天，注定不平凡的你，</p>
-      <p class="spl4">开始了与SDUTOJ的不期而遇。</p>
+      <p class="spl4">开始了与<span>SDUTOJ</span>的不期而遇。</p>
       <p class="spl3">
-        <span>时至今日,我们的旅程已经开始了</span><span>{{ sec }}</span
+        <span>时至今日,我们的旅程已经开始了</span><span class="sec">{{ sec }}</span
         ><span>天</span>
       </p>
     </div>

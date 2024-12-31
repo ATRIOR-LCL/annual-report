@@ -2,10 +2,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  height: 55%;
+  height: 90% !important;
+  overflow: visible;
 }
 
 .yh {
@@ -15,11 +16,10 @@
   /* justify-content: center;
   align-items: center; */
   width: 100%;
-  height: 0.8rem;
-  font-size: 0.5rem;
+  height: 4rem !important;
+  font-size: 0.4rem;
   font-weight: 700;
-  letter-spacing: 0.1rem;
-  top: 0;
+  top: -1rem;
   background-clip: text;
   color: rgba(0, 0, 0, 0);
   transition-delay: 0.5s;
@@ -35,16 +35,22 @@
   );
 }
 
+.nzc p{
+  color: #fff !important;
+}
+
 .tj {
+  text-align: center;
   position: relative;
   display: flex;
-  justify-content: center;
+  top: -.5rem;
+  flex-direction: column;
+  justify-content: center !important;
   align-items: center;
   width: 100%;
-  height: 0.8rem;
-  font-size: 0.5rem;
+  height: 5rem !important;
+  font-size: 0.4rem !important;
   font-weight: 700;
-  letter-spacing: 0.1rem;
   background-color: green;
   color: rgba(0, 0, 0, 0);
   background-clip: text;
@@ -52,12 +58,27 @@
   transition-delay: 1s;
   filter: blur(0.1rem);
   opacity: 0;
+  overflow: visible !important; 
   background-image: linear-gradient(
     -225deg,
     #5d9fff 0%,
     #b8dcff 48%,
     #6bbbff 100%
   );
+
+  .ntj{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    align-items: center;    
+    height: 50%;
+  }
+
+  .ntj p{
+    display: inline-block;
+    color: #fff;
+  }
 }
 
 .yhnum {
@@ -68,7 +89,7 @@
   background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
 }
 
-.nzc {
+/* .nzc {
   position: absolute;
   display: flex;
   width: 8rem;
@@ -80,15 +101,14 @@
   align-items: center;
   color: #fff;
   letter-spacing: 0.01rem;
-}
+} */
 
-.ntj {
+/* .ntj {
   position: absolute;
   text-align: center;
   display: flex;
   width: 8rem;
   height: 0.3rem;
-  /* background-color: red; */
   font-weight: 70;
   font-size: 0.3rem;
   bottom: -0.8rem;
@@ -96,7 +116,7 @@
   align-items: center;
   color: #fff;
   letter-spacing: 0.01rem;
-}
+} */
 
 .tjnum {
   transform: scale(1.4);
@@ -112,14 +132,6 @@
 }
 .yh {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 3rem;
-  background-color: #5d9fff;
-  word-wrap: break-word;
-}
-
-.tj {
   flex-direction: column;
   justify-content: space-around;
   height: 3rem;
