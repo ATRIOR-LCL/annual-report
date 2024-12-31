@@ -152,7 +152,7 @@
                   class="bisai"
                 >
                   <span>{{ item.title }}</span>
-                  <span>{{ item.awardStr }}</span>
+                  <span :class="item.medal ? `text-${item.medal}` : ''">{{ item.awardStr }}</span>
                 </li>
               </div>
             </div>

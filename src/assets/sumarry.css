@@ -179,7 +179,7 @@
 
   .bisai span:nth-child(2) {
     font-size: 0.6rem;
-    color: darkorange;
+    /* color: darkorange; */
   }
 }
 

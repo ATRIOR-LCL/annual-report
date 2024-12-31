@@ -5,7 +5,7 @@
       <div class="lttxt">
         <div class="txt1">作为全新升级的组队赛</div>
         <div class="txt2">你和你的队友所向披靡，怒切 <span>{{ cnt }}</span> 题</div>
-        <div class="txt3">一举夺得 <span>{{ chengji }}</span> 的战绩</div>
+        <div class="txt3">一举夺得 <span :class="medal ? `text-${medal}-dark` : ''">{{ chengji }}</span> 的战绩</div>
         <div class="txt4">这份力量，就是你们的羁绊</div>
       </div>
       <div class="zgn">
@@ -26,6 +26,7 @@
 import { liuyang } from "@/assets/global";
 let cnt = liuyang.value.competition.sdutpmc16th.solved
 let chengji = liuyang.value.competition.sdutpmc16th.awardStr
+let medal = liuyang.value.competition.sdutpmc16th.medal
 import { can, isnext, isScoll } from "@/assets/global";
 import { onMounted, ref } from "vue";
 const first = ref(true);

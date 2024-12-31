@@ -4,7 +4,7 @@
       <div class="xstxt1">
         <div class="txt1">在 <span>5</span> 月 <span>12</span> 日<br>你参加了紧张刺激的 <span>第十六届校赛</span></div>
         <div class="txt2">你与 <span>{{ co }}</span> 名选手<br>以及 <span>{{ small }}</span> 名中小学生同台竞技</div>
-        <div class="txt3">并拿下了 <span>{{ cj }}</span> 的好成绩</div>
+        <div class="txt3">并拿下了 <span :class="medal ? `text-${medal}-dark` : ''">{{ cj }}</span> 的好成绩</div>
       </div>
       <div class="xstxt2">
         <div>这届校赛中</div>
@@ -87,6 +87,7 @@ import { liuyang } from "@/assets/global";
 let co = liuyang.value.competition.sdutpc16.officialParticipantCount
 let small = liuyang.value.competition.sdutpc16.unofficialParticipantCount
 let cj = liuyang.value.competition.sdutpc16.awardStr
+let medal = liuyang.value.competition.sdutpc16.medal
 onMounted(() => {
   const allanim = new IntersectionObserver(
     (lists) => {

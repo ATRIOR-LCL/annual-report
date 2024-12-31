@@ -38,7 +38,8 @@
 .txt3 span {
   white-space: nowrap;
   font-size: .7rem;
-  color: #fff !important;
+  /* color: #fff !important; */
+  color: #fff;
 }
 
 .xstxt2 div:nth-child(2) {
