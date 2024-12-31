@@ -10,14 +10,6 @@
       <span class="font2-txt">愿时间与你共写美梦，</span>
       <span class="font2-txt">愿祝福伴你终抵云顶。</span>
       <span class="font2-txt">感谢陪伴！</span>
-      <span class="bbLue font2-txt">
-        <p>策划</p>
-        <img src="../assets/img/bLue.png" alt="">
-        <p>bLue</p>
-      </span>
-      <span class="aatrior font2-txt">
-
-      </span>
     </div>
     <button class="btn" @click="gosum">点击生成你的专属OJ年报🥳</button>
     <div class="sdutoj">

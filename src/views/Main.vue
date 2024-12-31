@@ -1,10 +1,12 @@
 <template>
-  <div class="music">
-    <button @click="playBGM" class="music">播放BGM</button>
-    <span style="color: white"
+  <div class="music" v-if="musicStart">
+    <!-- <button   @click="playBGM" class="play_button"><img src="../assets/img/music_playing.svg" alt="" class="playing"></button> -->
+    <!-- <span style="color: white"
       >Current: {{ bgmMuted ? "已静音" : "未静音" }}</span
-    >
-    <button @click="switchMuteBGM">{{ bgmMuted ? "取消静音" : "静音" }}</button>
+    > -->
+    <button  @click="switchMuteBGM" class="play_button">
+      <img v-if="musicPlay" src="../assets/img/music_playing.svg" alt="">
+      <img v-else src="../assets/img/music_shutoff.svg" alt=""></button>
   </div>
   <Suspense>
     <Start v-if="gogo"></Start>
@@ -17,7 +19,7 @@ import { onMounted } from "vue";
 import { Howl } from "howler";
 import Start from "./Start.vue";
 import Message from "./Message.vue";
-import { gogo, bgmMuted, playBGM, switchMuteBGM } from "@/assets/global";
+import { gogo, bgmMuted, playBGM, switchMuteBGM, musicPlay, musicStart } from "@/assets/global";
 
 onMounted(() => {
   !window.bgm &&
@@ -49,6 +51,22 @@ onMounted(() => {
 
 .music {
   position: fixed;
+  left: 75%;
+  top: 3.5%;
   /* background-color: red; */
+  z-index: 999999;
+}
+
+.play_button{
+  border: 0;
+  width: .8rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.playing{
+  height: .7rem;
+  /* clip-path: circle(50% at 50% 50%); */
+  /* border-radius: 50%; */
 }
 </style>

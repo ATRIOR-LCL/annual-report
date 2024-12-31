@@ -58,7 +58,7 @@
 
 <script setup>
 import { nextTick, onMounted, ref } from "vue";
-import { userid, avatar, global, liuyang } from "@/assets/global";
+import { userid, avatar, global, liuyang, playBGM, musicPlay, musicStart } from "@/assets/global";
 import { gogo } from "@/assets/global";
 import { useRouter } from "vue-router";
 import req from "@/utils/req";
@@ -103,6 +103,11 @@ if (window.screen.width > 1000) {
 const Going = async () => {
   if (isChecked) {
     try {
+      playBGM()
+      setTimeout(() => {
+        musicStart.value=true
+        musicPlay.value=true
+      }, 1500);
       const globalres = await req.post("/getStaticObject", {
         key: "oj-annual-2024-global",
       });
@@ -110,7 +115,7 @@ const Going = async () => {
         key: `oj-annual-2024-user-${userid.value}`,
       });
       global.value = globalres.content;
-      console.log(selfres);
+      // console.log(selfres);
       liuyang.value = selfres.content;
       // console.log(liuyang.value)
       setTimeout(() => {

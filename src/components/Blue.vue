@@ -159,7 +159,7 @@ onMounted(() => {
             can.value = true;
             isnext.value = true;
             isScoll.value = true;
-          }, 18000);
+          }, 21000);
           list.target.classList.add("actives");
           const txt1s = document.querySelectorAll(".txt1-a, .txt1-b, .txt1-c");
           const txt2s = document.querySelectorAll(".txt2-a, .txt2-b, .txt2-c ");
@@ -174,7 +174,7 @@ onMounted(() => {
             setTimeout(() => {
               txt2s.forEach((txt1) => txt1.classList.add("fontactive"));
             }, 2000);
-          }, 7000);
+          }, 10000);
 
           setTimeout(() => {
             bg2.value.classList.add("rotate1");
@@ -190,7 +190,7 @@ onMounted(() => {
             setTimeout(() => {
               txt3s.forEach((txt1) => txt1.classList.add("fontactive"));
             }, 2000);
-          }, 17000);
+          }, 20000);
         } else {
           list.target.classList.remove("actives");
         }
