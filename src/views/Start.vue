@@ -1,10 +1,10 @@
 <template>
   <section>
-    <div class="card qr">
+    <!-- <div class="card qr">
       <img src="../assets/img/qq.png" alt="" />
       <p>~ 推荐使用QQ微信扫码<br />获取最佳体验</p>
       <lay-qrcode text="https://acm.sdut.edu.cn/onlinejudge3/annual-report-2024"></lay-qrcode>
-    </div>
+    </div> -->
 
     <div class="start">
       <div class="sdutoj">SDUTOJ</div>
@@ -17,7 +17,8 @@
       </div>
       <button class="back" @click="Logout">
         <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${avatar}`" alt="" />
-        <span>Come Back</span>
+        <!-- <span class="nickname">{{ username }}</span> -->
+        <span>切换账号</span>
       </button>
       <button class="brutalist-button" @click="Going" @touchstart="Going">
         <div class="ms-logo">
@@ -47,6 +48,7 @@ import { useRouter } from "vue-router";
 import req from "@/utils/req";
 const isChecked = ref(true);
 const router = useRouter();
+// const username = liuyang.value.username
 axios.defaults.baseURL = "/onlinejudge3/api/";
 // userid = String(userid)
 onMounted(async () => {

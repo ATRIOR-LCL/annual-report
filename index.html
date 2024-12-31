@@ -12,11 +12,14 @@
         width: 100vw;
         height: 100vh;
         overflow: hidden;
-        background-image: url('./src/assets/img/sdutacm_bg_desktop.jpg');
         background-size: cover;
+        background-image: url('./src/assets/img/sdutacm_bg_desktop.jpg');
         z-index: -3;
         display: flex;
         justify-content: center;
+      }
+      #app{
+        overflow: hidden;
       }
     </style>
   </head>
@@ -25,12 +28,20 @@
     <script type="module" src="/src/main.js"></script>
     <script>
       const app = document.querySelector("#app");
-      app.style.width = 10 + "rem";
+      const body = document.querySelector("body");
+      // app.style.width = 10 + "rem";
       app.style.position = "relative";
       const useRem = () => {
         let w = window.innerWidth;
-        if (w > 700) w /= 40;
-        else w /= 10;
+        if (w > 700) {
+          app.style.width = 10+"rem"
+          w /= 40;
+        } else {
+          w /= 10;
+          app.style.width=100+"vw"
+          app.style.height = 100 + "vh"
+          body.style.maxWidth=app.style.width
+        }
         let size = w + "px";
         document.documentElement.style.fontSize = size;
       };
