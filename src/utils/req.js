@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie';
 import Axios from 'axios';
 
-if (typeof window === 'undefined') {
+if (typeof window !== 'undefined') {
   window.Cookies = Cookies;
 }
 
