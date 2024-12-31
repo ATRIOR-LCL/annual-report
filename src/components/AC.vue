@@ -78,9 +78,6 @@ if(top3Avatar){
 }
 let isactive = liuyang.value.annualActive;
 
-const star1 = ref(null);
-const star2 = ref(null);
-const star3 = ref(null);
 let total_ac = liuyang.value.accepted;
 let new_ac = liuyang.value.annualNewAccepted;
 const ss = ref("");
@@ -103,9 +100,6 @@ onMounted(() => {
           isScoll.value = true;
         }, 2500);
         list.target.classList.add("active");
-        star1.value.style.animationPlayState = "running";
-        star2.value.style.animationPlayState = "running";
-        star3.value.style.animationPlayState = "running";
       } else {
         list.target.classList.remove("active");
       }
