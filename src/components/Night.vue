@@ -2,12 +2,11 @@
   <section>
     <div class="night">
       <div class="nightfont">
-        与星同行的你<span>{{ night }}</span>还在做题<span>😴</span>
+        <p>与星同行的你</p><span style="margin: .3rem;">{{ night }}</span><p>还在做题<span>😴</span></p>
       </div>
       <div class="nightgl">
         这是属于你的不眠之夜
-        <div class="haiyou" v-if="hastogether">在这一晚，还有{{haiyou}}名用户和你一样在夜色中遨想星河</div>
-        <!-- <img class="sticker" src="../assets/img/sticker.png" alt="" /> -->
+        <div class="haiyou" v-if="hastogether">在这一晚，还有<span style="font-size: .7rem;">{{haiyou}}</span>名用户和你一样在夜色中遨想星河</div>
       </div>
       <div class="moon"></div>
       <div class="sea"></div>

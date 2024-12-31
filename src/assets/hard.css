@@ -20,19 +20,20 @@
 .hardtxt {
   letter-spacing: 0.1rem;
   width: 6rem;
-  height: 15% !important;
+  height: 20% !important;
   display: flex;
+  flex-direction: column;
   font-size: 0.35rem;
   font-weight: 700;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   background-clip: text;
   flex-wrap: wrap;
   color: rgba(0, 0, 0, 0);
   background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
   position: absolute;
   left: 1rem;
-  top: 0rem;
+  top: 5% !important;
   transition: all 1s ease;
   transition-delay: 0.5s;
   transform: translateX(-3rem);
@@ -59,7 +60,7 @@
   font-weight: 70;
   display: flex;
   color: aliceblue;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   transition: all 1s ease;
   transition-delay: 1s;
