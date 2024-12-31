@@ -73,6 +73,7 @@
   <Hard id="page7" class="page hide" v-if="hasMaxTries"></Hard>
   <BiSai id="page8" class="page hide" v-if="hascontest"></BiSai>
   <Blue id="page9" class="page hide" v-if="hasBlue" ></Blue>
+  
   <XiaoSai id="page10" class="page hide" v-if="hasXiaoSai"></XiaoSai>
   <XinSheng id="page11" class="page hide" v-if="ncc"></XinSheng>
 

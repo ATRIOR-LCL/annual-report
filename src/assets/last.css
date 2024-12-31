@@ -66,6 +66,18 @@
   transition: opacity 1s ease !important;
 }
 
+.bbLue{
+  display: flex;
+  width: 50%;
+  height: 1rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bbLue img{
+  height: 1rem;
+}
+
 .font2 span:nth-last-child(1) {
   font-size: 0.8rem;
 }
