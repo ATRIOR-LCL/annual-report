@@ -17,7 +17,7 @@ export const musicPlay = ref(false);
 export const bgmPlaying = ref(false);
 export const bgmMuted = ref(false);
 export const playBGM = () => {
-  window.bgm && window.bgm.play();
+  window.bgm && !bgmPlaying.value && window.bgm.play();
   bgmPlaying.value = true;
 };
 export const switchMuteBGM = () => {

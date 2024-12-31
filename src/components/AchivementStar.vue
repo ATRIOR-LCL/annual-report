@@ -27,10 +27,10 @@
               :style="{
                 background:
                   item.level == 1
-                    ? 'linear-gradient(to right, #715815 0%, #49390E 100%)'
+                    ? 'linear-gradient(to right, #543625 0%, #342217 100%)'
                     : item.level == 2
                     ? 'linear-gradient(to right, #575757 0%, #313131 100%)'
-                    : 'linear-gradient(to right, #543625 0%, #342217 100%)',
+                    : 'linear-gradient(to right, #715815 0%, #49390E 100%)',
               }"
             >
               <svg

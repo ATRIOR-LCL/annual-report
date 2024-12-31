@@ -47,9 +47,9 @@
     </div>
     <div class="lt_txt" :class="{ upp: isClick }">
       <div class="kmc fontremove">
-        <div class="hei">
-          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${liuyang.avatar}`" alt="" style="border-radius: 50%;" />
-          <span>{{liuyang.username}}，</span>
+        <div class="hei" style="width: 100%">
+          <!-- <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${liuyang.avatar}`" alt="" style="border-radius: 50%;" /> -->
+          <span>{{liuyang.nickname}}，</span>
         </div>
         欢迎回家！在这一年里， SDUT OJ 发生了许多新的故事，其中也有属于你的篇章。
         <span

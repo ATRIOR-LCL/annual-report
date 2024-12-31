@@ -3,7 +3,7 @@
     <!-- <div class="card qr">
       <img src="../assets/img/qq.png" alt="" />
       <p>~ 推荐使用QQ微信扫码<br />获取最佳体验</p>
-      <lay-qrcode text="https://acm.sdut.edu.cn/onlinejudge3/annual-report-2024"></lay-qrcode>
+      <lay-qrcode text="https://acm.sdut.edu.cn/onlinejudge3/annual-report-2024/?from=qr"></lay-qrcode>
     </div> -->
 
     <div class="start">
@@ -23,11 +23,11 @@
             style="border-radius: 50%"
           />
           <div class="name">
-            {{ username }}
+            {{ nickname }}
           </div>
         </div>
         <button class="back" @click="Logout">
-          <!-- <span class="nickname">{{ username }}</span> -->
+          <!-- <span class="nickname">{{ nickname }}</span> -->
           <span>切换账号</span>
         </button>
       </div>
@@ -65,7 +65,7 @@ import req from "@/utils/req";
 const isChecked = ref(true);
 const router = useRouter();
 
-const username = ref(null)
+const nickname = ref(null)
 axios.defaults.baseURL = "/onlinejudge3/api/";
 // userid = String(userid)
 onMounted(async () => {
@@ -74,7 +74,7 @@ onMounted(async () => {
     console.log("hei");
     userid.value = String(getres.userId);
     avatar.value = String(getres.avatar);
-    username.value = getres.username
+    nickname.value = getres.nickname
     console.log(avatar.value);
     router.push({ name: "main" });
   } else {
@@ -103,7 +103,6 @@ if (window.screen.width > 1000) {
 const Going = async () => {
   if (isChecked) {
     try {
-      playBGM()
       setTimeout(() => {
         musicStart.value=true
         musicPlay.value=true
@@ -121,6 +120,9 @@ const Going = async () => {
       setTimeout(() => {
         gogo.value = false;
       }, 1000);
+      setTimeout(() => {
+        playBGM()
+      }, 2500);
     } catch (e) {
       console.log(e);
     }

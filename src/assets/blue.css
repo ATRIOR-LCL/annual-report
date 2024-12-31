@@ -123,6 +123,16 @@
   transition: all 1s ease;
 }
 
+.txt3-a {
+  color: rgba(207, 229, 252, .8) !important;
+}
+.txt3-b {
+  color: rgba(209, 235, 253, .9) !important;
+}
+.txt3-c {
+  color: rgba(211, 239, 254, 1) !important;
+}
+
 .large,
 .circle-dark {
   z-index: 2;

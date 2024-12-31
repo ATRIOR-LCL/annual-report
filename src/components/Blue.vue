@@ -39,16 +39,16 @@
                   fir == '蒙德'
                     ? '#2e9c9e'
                     : fir == '璃月'
-                    ? '#c7a652'
+                    ? '#f3c960'
                     : fir == '稻妻'
                     ? '#9262bb'
                     : fir == '须弥'
                     ? '#559c00'
                     : fir == '枫丹'
-                    ? '#009fd2'
+                    ? '#2dc1f0'
                     : '',
               }"
-              >{{ fir }}</span
+              >&nbsp;{{ fir }}&nbsp;</span
             >篇
           </div>
           <div class="txt2-b">
@@ -157,7 +157,7 @@ onMounted(() => {
         if (list.isIntersecting) {
           setTimeout(() => {
             can.value = true;
-            isnext.value = true;
+            // isnext.value = true;
             isScoll.value = true;
           }, 21000);
           list.target.classList.add("actives");

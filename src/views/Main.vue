@@ -51,8 +51,10 @@ onMounted(() => {
 
 .music {
   position: fixed;
-  left: 75%;
-  top: 3.5%;
+  /* left: 75%; */
+  right: 10%;
+  /* top: 3.5%; */
+  top: calc(5% - 0.2rem);
   /* background-color: red; */
   z-index: 999999;
 }
@@ -62,6 +64,7 @@ onMounted(() => {
   width: .8rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, .1);
 }
 
 .playing{

@@ -76,7 +76,8 @@ let top3hasAvatar = false
 if(top3Avatar){
   top3hasAvatar=true
 }
-let isactive = liuyang.value.annualActive;
+// let isactive = liuyang.value.annualActive;
+let isactive = liuyang.value.annualNewAccepted > 0;
 
 let total_ac = liuyang.value.accepted;
 let new_ac = liuyang.value.annualNewAccepted;

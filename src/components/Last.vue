@@ -55,7 +55,7 @@
         :width="78"
         :backgroundColor="'#ffffff00'"
         class="sum-qr"
-        text="https://acm.sdut.edu.cn/onlinejudge3/annual-report-2024"
+        text="https://acm.sdut.edu.cn/onlinejudge3/annual-report-2024/?from=qr"
         style="background-color: transparent"
       ></lay-qrcode>
       <img
@@ -88,7 +88,7 @@
         </div>
         <div class="results-summary-container__result">
           <div class="heading-tertiary">
-            我的 SDUT OJ 2024 年报<span>🥳</span>
+            我的 SDUT OJ 2024 年报 <span>🥳</span>
           </div>
           <div class="result-box">
             <img
@@ -98,7 +98,7 @@
             />
           </div>
           <div class="result-text-box">
-            <div class="heading-secondary">{{ username }}</div>
+            <div class="heading-secondary">{{ nickname }}</div>
             <div class="paragraph">
               <div class="ac-num">
                 <p>
@@ -107,7 +107,7 @@
                 <p>
                   年度 AC <span>{{ newAc }}</span>
                 </p>
-                <p class="percent">Top {{ percent }}%</p>
+                <p v-if="percent > 0" class="percent">Top {{ percentVal }}%</p>
               </div>
               <div class="ac-num">
                 <div class="rating" v-if="showRating">
@@ -153,7 +153,7 @@
               </div>
             </div>
           </div>
-          <div class="results-summary-container__options">
+          <div class="results-summary-container__options" :style="{ opacity : tags.length > 0 ? 1 : 0 }">
             <div class="tag-head">2024 回忆标签 ✨️</div>
             <ul class="summary-result-options">
               <li v-for="(item, index) in tags" :key="index" class="tag">
@@ -177,7 +177,7 @@ import {
   bgmMuted,
 } from "@/assets/global";
 let percent = liuyang.value.annualNewAcceptedTopPercent;
-percent = Math.max(Math.floor(100 * percent), 1);
+let percentVal = ref(Math.max(Math.floor(100 * percent), 1));
 let allAc = liuyang.value.accepted;
 let newAc = liuyang.value.annualNewAccepted;
 let userRating = liuyang.value.rating;
@@ -186,7 +186,7 @@ if (userRating === 0) {
   showRating.value = false;
 }
 let userAchieve = liuyang.value.achievements.length;
-let username = liuyang.value.username;
+let nickname = liuyang.value.nickname;
 import { ref, onMounted, nextTick } from "vue";
 import html2canvas from "html2canvas";
 import QRCode from "qrcode";

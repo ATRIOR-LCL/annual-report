@@ -4,8 +4,8 @@
       <img src="../assets/img/pmc.png" alt="" class="pmc" />
       <div class="lttxt">
         <div class="txt1">作为全新升级的组队赛</div>
-        <div class="txt2">你和你的队友所向披靡，怒切<span>{{ cnt }}</span>题</div>
-        <div class="txt3">一举夺得<span>{{ chengji }}</span>的战绩</div>
+        <div class="txt2">你和你的队友所向披靡，怒切 <span>{{ cnt }}</span> 题</div>
+        <div class="txt3">一举夺得 <span>{{ chengji }}</span> 的战绩</div>
         <div class="txt4">这份力量，就是你们的羁绊</div>
       </div>
       <div class="zgn">
@@ -17,7 +17,7 @@
       <div class="ygg">「超的超超超超超超级阳光菇」</div>
       <div class="cc">「Mirai 大战 灿灿」</div>
       <div class="hwc">「回文串串回文」</div>
-      <div class="llzm">这些题目一定也使你历历在目<span>🤗</span></div>
+      <div class="llzm">这些题目一定也使你历历在目 <span>🤗</span></div>
     </div>
   </section>
 </template>
