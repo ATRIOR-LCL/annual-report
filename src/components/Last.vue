@@ -110,7 +110,7 @@
             <img
               :src="`https://cdn.sdutacm.cn/oj/image/avatars/${avatar}`"
               alt=""
-              style="border-radius: 50%;"
+              style="border-radius: 50%"
             />
           </div>
           <div class="result-text-box">
@@ -123,11 +123,11 @@
                 <p>
                   今年 AC <span>{{ newAc }}</span>
                 </p>
-                <!-- <p>90%</p> -->
+                <p class="percent">Top{{ percent }}%</p>
               </div>
               <div class="ac-num">
                 <div class="rating" v-if="showRating">
-                  Rating 
+                  Rating
                   <span
                     class="rating-color"
                     :style="{
@@ -170,15 +170,14 @@
             </div>
           </div>
           <div class="results-summary-container__options">
-          <div class="tag-head">2024 回忆标签✨️</div>
-          <ul class="summary-result-options">
-            <li v-for="(item, index) in tags" :key="index" class="tag">
-              {{ item }}
-            </li>
-          </ul>
+            <div class="tag-head">2024 回忆标签✨️</div>
+            <ul class="summary-result-options">
+              <li v-for="(item, index) in tags" :key="index" class="tag">
+                {{ item }}
+              </li>
+            </ul>
+          </div>
         </div>
-        </div>
-        
       </div>
     </div>
   </section>
@@ -186,16 +185,17 @@
 
 <script setup>
 import { days, avatar, liuyang } from "@/assets/global";
-
+let percent = liuyang.value.annualNewAcceptedTopPercent;
+percent = Math.max(Math.floor(100 * percent), 1);
 let allAc = liuyang.value.accepted;
 let newAc = liuyang.value.annualNewAccepted;
 let userRating = liuyang.value.rating;
-const showRating = ref(true)
-if(userRating === 0){
-  showRating.value=false
+const showRating = ref(true);
+if (userRating === 0) {
+  showRating.value = false;
 }
 let userAchieve = liuyang.value.achievements.length;
-let username = liuyang.value.username
+let username = liuyang.value.username;
 import { ref, onMounted, nextTick } from "vue";
 import html2canvas from "html2canvas";
 import QRCode from "qrcode";
@@ -379,8 +379,7 @@ const downloadAsImage = async () => {
 
 const sumarry = ref(null);
 
-const tags = ref([
-]);
+const tags = ref([]);
 
 if (liuyang.value.annualNewAccepted >= 100) {
   tags.value.push("刷题王");
@@ -404,11 +403,10 @@ if (liuyang.value.competition.sdutpmc16th) {
   tags.value.push("队伍的羁绊");
 }
 
-const contests = ref([
-    ]);
-const haveContest = ref(false)
+const contests = ref([]);
+const haveContest = ref(false);
 if (liuyang.value.competition.attendedCompetitionCount > 0) {
-  haveContest.value=true
+  haveContest.value = true;
   contests.value = liuyang.value.competition.attendedCompetitions;
 }
 </script>

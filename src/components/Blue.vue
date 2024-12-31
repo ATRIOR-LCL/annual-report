@@ -41,10 +41,18 @@
           <img src="../assets/img/fengdan.hpg" v-if="fd" alt="">
         </div>
         <div class="circle large" ref="large2">
-          <img src="../assets/img/image2.jpg" alt="" />
+          <img src="../assets/img/mengde.jpg" alt="" v-if="md">
+          <img src="../assets/img/liyue.jpg" v-if="ly" alt="">
+          <img src="../assets/img/daoqi.jpg" v-if="dq" alt="">
+          <img src="../assets/img/xumu.jpg" v-if="xm" alt="">
+          <img src="../assets/img/fengdan.hpg" v-if="fd" alt="">
         </div>
         <div class="circle small" ref="small2">
-          <img src="../assets/img/image2.jpg" alt="" />
+          <img src="../assets/img/mengde.jpg" alt="" v-if="md">
+          <img src="../assets/img/liyue.jpg" v-if="ly" alt="">
+          <img src="../assets/img/daoqi.jpg" v-if="dq" alt="">
+          <img src="../assets/img/xumu.jpg" v-if="xm" alt="">
+          <img src="../assets/img/fengdan.hpg" v-if="fd" alt="">
         </div>
         <div class="circle-dark"></div>
       </div>

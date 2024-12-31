@@ -92,6 +92,8 @@
   }
 }
 
+
+
 .ac-num {
   position: relative;
   display: flex;
@@ -114,6 +116,12 @@
   }
   span {
     color: #4fb24f;
+  }
+  .percent{
+    font-size: .35rem !important;
+    font-weight: 70;
+    position: absolute !important;
+    right: -35% !important;
   }
 }
 .ac-num p:nth-child(3),
