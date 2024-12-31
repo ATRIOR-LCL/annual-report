@@ -157,7 +157,6 @@ onMounted(() => {
         if (list.isIntersecting) {
           setTimeout(() => {
             can.value = true;
-            // isnext.value = true;
             isScoll.value = true;
           }, 21000);
           list.target.classList.add("actives");
@@ -190,7 +189,7 @@ onMounted(() => {
             setTimeout(() => {
               txt3s.forEach((txt1) => txt1.classList.add("fontactive"));
             }, 2000);
-          }, 20000);
+          }, 25000);
         } else {
           list.target.classList.remove("actives");
         }

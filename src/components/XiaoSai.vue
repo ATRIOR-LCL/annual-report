@@ -110,7 +110,7 @@ onMounted(() => {
             setTimeout(() => {
               xstxt2.classList.add("active");
             }, 1000);
-          }, 4000);
+          }, 7000);
         } else {
           list.target.classList.remove("active");
         }
