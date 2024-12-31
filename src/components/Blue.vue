@@ -158,6 +158,7 @@ onMounted(() => {
           setTimeout(() => {
             can.value = true;
             isScoll.value = true;
+            isnext.value=true
           }, 21000);
           list.target.classList.add("actives");
           const txt1s = document.querySelectorAll(".txt1-a, .txt1-b, .txt1-c");

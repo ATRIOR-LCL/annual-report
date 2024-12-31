@@ -82,8 +82,8 @@
   <AchivementStar id="page13" class="page hide" v-if="hasAchive"></AchivementStar>
 
   <Master id="page14" class="page hide"></Master>
-  <Last id="pae15" class="page hide"></Last>
 
+  <Last id="pae15" class="page hide"></Last>
 
   <section style="z-index: -1"></section>
 </template>

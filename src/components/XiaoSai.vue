@@ -97,7 +97,7 @@ onMounted(() => {
             can.value = true;
             isnext.value = true;
             isScoll.value = true;
-          }, 5000);
+          }, 9000);
           list.target.classList.add("active");
           const xstxt1 = document.querySelector(".xstxt1");
           const xstxt2 = document.querySelector(".xstxt2");

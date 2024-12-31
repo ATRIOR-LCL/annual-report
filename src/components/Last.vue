@@ -52,7 +52,7 @@
     <div class="sumarry" ref="sumarry">
       <span class="scanner">扫码查看 2024 专属年度报告</span>
       <lay-qrcode
-        :width="78"
+        :width="93"
         :backgroundColor="'#ffffff00'"
         class="sum-qr"
         text="https://acm.sdut.edu.cn/onlinejudge3/annual-report-2024/?from=qr"
@@ -179,6 +179,7 @@ import {
   musicStart,
   musicPlay,
   bgmMuted,
+  bgmPlaying,
 } from "@/assets/global";
 let percent = liuyang.value.annualNewAcceptedTopPercent;
 let percentVal = ref(Math.max(Math.floor(100 * percent), 1));
@@ -268,7 +269,6 @@ onMounted(() => {
             if (entry.isIntersecting) {
               musicPlay.value = false;
               musicStart.value = false;
-              bgmMuted.value = false;
               const font2txt = document.querySelectorAll(".font2-txt");
               font2txt.forEach(function (currentValue, index, array) {
                 if (index === array.length - 1) {
