@@ -33,7 +33,7 @@
   background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
   position: absolute;
   left: 1rem;
-  top: 5% !important;
+  top: 10% !important;
   transition: all 1s ease;
   transition-delay: 0.5s;
   transform: translateX(-3rem);
@@ -43,6 +43,7 @@
 }
 
 .hardtxt span:nth-child(2) {
+  font-size: .5rem;
   margin-left: 0.1rem;
   margin-right: 0.1rem;
   color: aliceblue;
@@ -54,7 +55,7 @@
   height: 0.3rem;
   position: absolute;
   left: 1rem;
-  top: 25% !important;
+  top: 30% !important;
   font-size: 0.2rem;
   /* font-size: .1rem; */
   font-weight: 70;
@@ -134,7 +135,7 @@
   width: 6rem;
   height: 6rem;
   z-index: -1;
-  bottom: 31% !important;
+  bottom: 25% !important;
 }
 
 .moon::before {
@@ -143,7 +144,7 @@
 }
 
 .hdsea {
-  bottom: 15%;
+  bottom: 10%;
   z-index: 0;
 }
 

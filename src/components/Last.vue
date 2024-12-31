@@ -451,7 +451,7 @@ section {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-1rem);
+    transform: translateY(-2rem);
   }
 }
 
