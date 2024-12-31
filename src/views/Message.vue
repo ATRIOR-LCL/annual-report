@@ -8,8 +8,9 @@
   />
   <!--  -->
   
+  <Blue id="page12" class="page" v-if="hasBlue" ></Blue>
 
-  <section id="page1" class="page ">
+  <section id="page1" class="page hide">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -75,7 +76,6 @@
   <LeiTai id="page9" class="page hide" v-if="haspmc"></LeiTai>
   <XinSheng id="page10" class="page hide" v-if="ncc"></XinSheng>
   <XiaoSai id="page11" class="page hide" v-if="hasXiaoSai"></XiaoSai>
-  <Blue id="page12" class="page hide" v-if="hasBlue" ></Blue>
   <AchivementStar id="page13" class="page hide" v-if="hasAchive"></AchivementStar>
 
   <Master id="page14" class="page hide"></Master>
