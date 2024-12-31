@@ -33,6 +33,10 @@
   align-items: center;
   /* background-color: red; */
   z-index: 11;
+  img{
+    display: block;
+    height: 1rem;
+  }
 }
 
 .name{
