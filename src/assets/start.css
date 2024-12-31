@@ -1,6 +1,6 @@
 .back {
-  position: absolute;
-  left: 0.1rem;
+  /* position: absolute; */
+  right: 0rem;
   top: 0.1rem;
   width: 4rem;
   height: 2rem;
@@ -14,14 +14,36 @@
   z-index: 99999;
   /* border-bottom: .1rem solid #fff; */
 }
+.allinfo{
+  width: 100%;
+  position: absolute;
+  height: 6%;
+  /* background-color: green; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 3%;
+}
+.user{
+  display: flex;
+  /* position: absolute; */
+  width: 40%;
+  height: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: red; */
+  z-index: 11;
+}
 
-.nickname{
-  
+.name{
+  display: inline-block;
+  color: #fff;
+  font-weight: 700;
 }
 
 .qr {
   display: inline-block;
-  background-color: red;
+  /* background-color: red; */
   position: absolute;
   right: -80%;
   top: 30%;

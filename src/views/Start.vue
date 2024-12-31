@@ -15,11 +15,22 @@
           <div class="blackhole-disc"></div>
         </div>
       </div>
-      <button class="back" @click="Logout">
-        <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${avatar}`" alt="" style="border-radius: 50%;" />
-        <!-- <span class="nickname">{{ username }}</span> -->
-        <span>切换账号</span>
-      </button>
+      <div class="allinfo">
+        <div class="user">
+          <img
+            :src="`https://cdn.sdutacm.cn/oj/image/avatars/${avatar}`"
+            alt=""
+            style="border-radius: 50%"
+          />
+          <div class="name">
+            {{ username }}
+          </div>
+        </div>
+        <button class="back" @click="Logout">
+          <!-- <span class="nickname">{{ username }}</span> -->
+          <span>切换账号</span>
+        </button>
+      </div>
       <button class="brutalist-button" @click="Going" @touchstart="Going">
         <div class="ms-logo">
           <img
@@ -33,7 +44,12 @@
         </div>
       </button>
       <div class="tongyi">
-        <input type="checkbox" class="ui-checkbox" :checked="isChecked" v-model="isChecked" />
+        <input
+          type="checkbox"
+          class="ui-checkbox"
+          :checked="isChecked"
+          v-model="isChecked"
+        />
         <p>同意SDUTOJ统计我的数据</p>
       </div>
     </div>
@@ -48,7 +64,8 @@ import { useRouter } from "vue-router";
 import req from "@/utils/req";
 const isChecked = ref(true);
 const router = useRouter();
-// const username = liuyang.value.username
+
+const username = ref(null)
 axios.defaults.baseURL = "/onlinejudge3/api/";
 // userid = String(userid)
 onMounted(async () => {
@@ -56,8 +73,9 @@ onMounted(async () => {
   if (getres) {
     console.log("hei");
     userid.value = String(getres.userId);
-    avatar.value=String(getres.avatar)
-    console.log(avatar.value)
+    avatar.value = String(getres.avatar);
+    username.value = getres.username
+    console.log(avatar.value);
     // userid.value = getres.data["userId"];
     router.push({ name: "main" });
   } else {
@@ -93,7 +111,7 @@ const Going = async () => {
         key: `oj-annual-2024-user-${userid.value}`,
       });
       global.value = globalres.content;
-      console.log(selfres)
+      console.log(selfres);
       liuyang.value = selfres.content;
       // console.log(liuyang.value)
       gogo.value = false;
