@@ -1,7 +1,6 @@
 <template>
   <section>
     <div class="xinsheng">
-      <!-- <img src="../assets/img/bbb.png" alt="" class="bbb" /> -->
       <div class="xshtxt">
         <div>作为新生，在争霸赛中首次展露头角</div>
         <div>你以 <span class="rank">{{rank}}</span> 的成绩<br />向大家宣告了你的存在<br />「嗯呢嗯呢」</div>
@@ -17,7 +16,6 @@ import { can, isnext, isScoll } from "@/assets/global";
 import { onMounted, ref } from "vue";
 
 onMounted(() => {
-  const bbb = document.querySelector(".bbb");
   const allin = new IntersectionObserver(
     (lists) => {
       lists.forEach((list) => {
@@ -28,7 +26,6 @@ onMounted(() => {
             isScoll.value = true;
           }, 2500);
           list.target.classList.add("active1");
-          bbb.classList.add("bgactive");
           const xshtxt = document.querySelector(".xshtxt");
           setTimeout(() => {
             xshtxt.classList.add("active");

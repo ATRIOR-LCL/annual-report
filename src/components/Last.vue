@@ -17,7 +17,6 @@
         Practice coding, compete with players, and become a master.
       </div>
       <div class="bottom-icon">
-        <img src="../assets/img/bottomicon.png" alt="" class="btm-txt" />
         <img
           src="../assets/img/bLue.png"
           alt=""
@@ -50,21 +49,6 @@
     </div>
   </section>
   <section v-else class="summ">
-    <!-- <button class="Btn">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        height="1em"
-        viewBox="0 0 384 512"
-        class="svgIcon"
-        @click="downloadAsImage"
-        @touchstart="downloadAsImage"
-      >
-        <path
-          d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-        ></path>
-      </svg>
-      <span class="icon2"></span>
-    </button> -->
     <div class="sumarry" ref="sumarry">
       <span class="scanner">扫码查看 2024 专属年度报告</span>
       <lay-qrcode
@@ -184,7 +168,14 @@
 </template>
 
 <script setup>
-import { days, avatar, liuyang } from "@/assets/global";
+import {
+  days,
+  avatar,
+  liuyang,
+  musicStart,
+  musicPlay,
+  bgmMuted,
+} from "@/assets/global";
 let percent = liuyang.value.annualNewAcceptedTopPercent;
 percent = Math.max(Math.floor(100 * percent), 1);
 let allAc = liuyang.value.accepted;
@@ -243,7 +234,7 @@ onMounted(() => {
                 entry.target.classList.add("charsanim");
                 const title = document.querySelector(".title");
                 title.classList.remove("fontactive");
-              }, 14000);
+              }, 31000);
             } else {
               entry.target.classList.remove("charsanim");
             }
@@ -258,7 +249,7 @@ onMounted(() => {
             if (entry.isIntersecting) {
               setTimeout(() => {
                 entry.target.classList.add("font1anim");
-              }, 14000);
+              }, 31000);
             } else {
               entry.target.classList.remove("font1anim");
             }
@@ -271,19 +262,26 @@ onMounted(() => {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
+              musicPlay.value = false;
+              musicStart.value = false;
+              bgmMuted.value = false;
               const font2txt = document.querySelectorAll(".font2-txt");
-              font2txt.forEach((ft) => {
-                ft.classList.add("font2anim");
+              font2txt.forEach(function (currentValue, index, array) {
+                if (index === array.length - 1) {
+                  currentValue.classList.add("font2Lastanim");
+                } else {
+                  currentValue.classList.add("font2anim");
+                }
               });
               setTimeout(() => {
                 entry.target.classList.add("remove");
-              }, 13000);
+              }, 30000);
               setTimeout(() => {
                 const sdutoj = document.querySelector(".sdutoj");
                 sdutoj.classList.add("sdutojanim");
                 const btn = document.querySelector(".btn");
                 btn.classList.add("sdutojanim");
-              }, 14000);
+              }, 31000);
             }
           });
         },
@@ -296,7 +294,7 @@ onMounted(() => {
             if (entry.isIntersecting) {
               setTimeout(() => {
                 entry.target.classList.add("btm-logo");
-              }, 14000);
+              }, 31000);
             } else {
               entry.target.classList.remove("btm-logo");
             }

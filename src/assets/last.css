@@ -34,6 +34,28 @@
   transform: translate(-50%, -50%);
   opacity: 0;
 }
+
+.blue::after{
+  content: '策划';
+  display: inline-block;
+  position: absolute;
+  color: #fff;
+  font-size: .15rem !important;
+  bottom: -120%;
+  left: 0;
+  font-weight: 70;
+}
+.atrior::after{
+  content: '开发';
+  display: inline-block;
+  position: absolute;
+  color: #fff;
+  font-size: .15rem !important;
+  bottom: -120%;
+  left: 0;
+  font-weight: 70;
+}
+
 .font2 {
   position: absolute;
   display: flex;
@@ -58,6 +80,8 @@
   /* overflow: hidden; */
 }
 .font2 span {
+  position: absolute;
+  top: 140%;
   white-space: nowrap;
   font-size: 0.6rem;
   font-weight: 700;
@@ -87,32 +111,48 @@
 } */
 
 .font2anim {
-  animation: showshow 4s forwards linear;
+  animation: showshow forwards linear;
+}
+
+.font2Lastanim{
+  animation: showLast forwards linear;
+}
+.font2 span:nth-child(1){
+  animation-delay: .5s;
+  animation-duration: 4s;
 }
 .font2 span:nth-child(2){
-  animation-delay: 1s;
+  animation-delay: 2s;
+  animation-duration: 4s;
 }
 .font2 span:nth-child(3){
-  animation-delay: 2s;
+  animation-delay: 4s;
+  animation-duration: 4s;
 }
 .font2 span:nth-child(4){
-  animation-delay: 3s;
+  animation-delay: 6s;
+  animation-duration: 4s;
 }
 
 .font2 span:nth-child(5){
-  animation-delay: 4s;
+  animation-delay: 8s;
+  animation-duration: 4s;
 }
 .font2 span:nth-child(6){
-  animation-delay: 5s;
+  animation-delay: 10s;
+  animation-duration: 4s;
 }
 .font2 span:nth-child(7){
-  animation-delay: 6s;
+  animation-delay: 14s;
+  animation-duration: 5s;
 }
 .font2 span:nth-child(8){
-  animation-delay: 7s;
+  animation-delay: 16s;
+  animation-duration: 5s;
 }
 .font2 span:nth-child(9){
-  animation-delay: 8s;
+  animation-delay: 20s;
+  animation-duration: 4s;
 }
 
 @keyframes showshow {
@@ -129,6 +169,23 @@
   100% {
     opacity: 0;
     transform: translateY(-30vh);
+  }
+}
+
+@keyframes showLast {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20vh);
   }
 }
 
@@ -260,6 +317,8 @@
 
 .blue {
   position: relative;
+  display: flex;
+  justify-content: center;
   right: 0.2rem;
   margin-left: 0.1rem;
   background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
@@ -269,6 +328,9 @@
 
 .atrior {
   margin-left: 0.1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   background-clip: text;
   color: transparent;
@@ -316,11 +378,6 @@
   to {
     transform: translateY(-1.5rem);
   }
-}
-
-.atrior::after,
-.blue::after {
-  content: "" !important;
 }
 
 /* From Uiverse.io by CristianMontoya98 */
