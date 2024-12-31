@@ -9,7 +9,7 @@
   <!--  -->
   
 
-  <section id="page1" class="page">
+  <section id="page1" class="page ">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>

@@ -7,7 +7,9 @@
             <div class="name">作为成就大师</div>
             <div class="handle">@Achievement</div>
             <div class="title">
-              <span class="emoji">😊</span> 你总计达成了<p>{{allcnt}}</p>项成就<br />
+              <span class="emoji">😊</span> 你总计达成了
+              <p>{{ allcnt }}</p>
+              项成就<br />
               继续努力向全收集进发吧！
             </div>
           </div>
@@ -62,9 +64,9 @@ import { can, isnext, isScoll, liuyang } from "@/assets/global";
 import { nextTick, onMounted, ref } from "vue";
 import achivements from "@/configs/achivement-config";
 
-let allcnt = liuyang.value.achievements.length
+let allcnt = liuyang.value.achievements.length;
 
-const tests = liuyang.value.achievements
+const tests = liuyang.value.achievements;
 // console.log(tests.length)
 let len = 0;
 if (tests.length < 5) {
@@ -118,12 +120,13 @@ onMounted(() => {
       const width = parseFloat(computedStyle.width);
       maxn = Math.max(maxn, width);
     });
-
+    let cnt = 0;
     const achshow = new IntersectionObserver(
       (lists) => {
         lists.forEach((list) => {
           if (list.isIntersecting) {
             hangs.forEach((hang) => {
+              cnt++
               const cnt1 = maxn;
               const cnt2 = -maxn * 3;
               hang.style.setProperty("--cnt1", `${cnt1}px`);
@@ -131,7 +134,12 @@ onMounted(() => {
               console.log(`--cnt1: ${cnt1}px, --cnt2: ${cnt2}px`);
               // console.log(maxn);
               setTimeout(() => {
-                hang.classList.add("gun");
+                if(cnt%2 != 0){
+                  hang.classList.add("gun");
+                }
+                else {
+                  hang.classList.add('gun2')
+                }
               }, 100);
             });
             setTimeout(() => {
@@ -162,6 +170,10 @@ onMounted(() => {
   animation: gundong 15s infinite linear;
 }
 
+.gun2 {
+  animation: gundong2 15s infinite linear;
+}
+
 @keyframes gundong {
   0% {
     transform: translateX(var(--cnt1));
@@ -172,6 +184,19 @@ onMounted(() => {
   100% {
     opacity: 0;
     transform: translateX(var(--cnt2));
+  }
+}
+
+@keyframes gundong2 {
+  0% {
+    transform: translateX(var(--cnt2));
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(var(--cnt1));
   }
 }
 
