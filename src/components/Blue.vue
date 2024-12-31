@@ -30,18 +30,7 @@
           <div class="txt2-a">
             你使用「<span
               :style="{
-                color:
-                  fir == '蒙德'
-                    ? '#2e9c9e'
-                    : fir == '璃月'
-                    ? '#c7a652'
-                    : fir == '稻妻'
-                    ? '#9262bb'
-                    : fir == '须弥'
-                    ? '#559c00'
-                    : fir == '枫丹'
-                    ? '#009fd2'
-                    : '',
+                color: '#525f6f'
               }"
               >{{ opendoor }}</span
             >」开门<br />并首先解锁了<span
