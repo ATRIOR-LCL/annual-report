@@ -17,17 +17,17 @@
       </div>
       <div class="acstar">
         <div class="stzx">
-          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top2Avatar}`" alt="" />
+          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top2Avatar}`" alt="" style="border-radius: 50%;" />
           <span class="rank2"
             >{{ top2Name }}
             <span class="rank2ac">{{ top2Ac }}</span>
           </span>
-          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top1Avatar}`" alt="" />
+          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top1Avatar}`" alt="" style="border-radius: 50%;"/>
           <span class="rank1"
             >{{ top1Name }}
             <span class="rank1ac">{{ top1Ac }}</span>
           </span>
-          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top3Avatar}`" alt="" />
+          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top3Avatar}`" alt="" style="border-radius: 50%;" />
           <span class="rank3"
             >{{ top3Name }}
             <span class="rank3ac">{{ top3Ac }}</span>

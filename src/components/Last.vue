@@ -110,10 +110,11 @@
             <img
               :src="`https://cdn.sdutacm.cn/oj/image/avatars/${avatar}`"
               alt=""
+              style="border-radius: 50%;"
             />
           </div>
           <div class="result-text-box">
-            <div class="heading-secondary">ATRIOR</div>
+            <div class="heading-secondary">{{ username }}</div>
             <div class="paragraph">
               <div class="ac-num">
                 <p>
@@ -190,7 +191,7 @@ let allAc = liuyang.value.accepted;
 let newAc = liuyang.value.annualNewAccepted;
 let userRating = liuyang.value.rating;
 let userAchieve = liuyang.value.achievements.length;
-
+let username = liuyang.value.username
 import { ref, onMounted, nextTick } from "vue";
 import html2canvas from "html2canvas";
 import QRCode from "qrcode";

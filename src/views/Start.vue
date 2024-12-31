@@ -16,7 +16,7 @@
         </div>
       </div>
       <button class="back" @click="Logout">
-        <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${avatar}`" alt="" />
+        <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${avatar}`" alt="" style="border-radius: 50%;" />
         <!-- <span class="nickname">{{ username }}</span> -->
         <span>切换账号</span>
       </button>
