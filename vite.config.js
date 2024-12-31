@@ -13,7 +13,7 @@ export default defineConfig({
   },
   experimental: {
     renderBuiltUrl(filename) {
-      let cdnUrl = process.env.CDN_URL || '';
+      let cdnUrl = process.env.CDN_URL || '/onlinejudge3/annual-report-2024';
       if (!cdnUrl.endsWith('/')) {
         cdnUrl += '/';
       }

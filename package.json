@@ -13,6 +13,7 @@
     "axios": "^1.7.9",
     "element-plus": "^2.9.1",
     "fullpage.js": "^4.0.31",
+    "howler": "^2.2.4",
     "html2canvas": "^1.4.1",
     "js-cookie": "^3.0.5",
     "marquee": "^0.2.1",
