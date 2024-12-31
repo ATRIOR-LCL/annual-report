@@ -65,7 +65,7 @@ import achivements from "@/configs/achivement-config";
 let allcnt = liuyang.value.achievements.length
 
 const tests = liuyang.value.achievements
-
+// console.log(tests.length)
 let len = 0;
 if (tests.length < 5) {
   len = 1;
@@ -73,7 +73,7 @@ if (tests.length < 5) {
   len = 2;
 } else if (tests.length > 10 && tests.length < 20) {
   len = 3;
-} else if (tests.length > 20) {
+} else if (tests.length >= 20) {
   len = 4;
 }
 
@@ -81,6 +81,7 @@ const arr = [];
 const arrChild = [];
 // console.log()
 const amount = Math.floor(tests.length / len);
+// console.log(amount)
 tests.forEach((test) => {
   achivements.forEach((achive) => {
     if (achive.achievementKey === test) {
@@ -89,8 +90,9 @@ tests.forEach((test) => {
         level: achive.level,
       };
       arrChild.push(aa);
+      // console.log(aa)
       if (arrChild.length == amount) {
-        // console.log(arrChild);
+        console.log(arrChild);
         arr.push(Array.from(arrChild));
         arrChild.length = 0;
       }
@@ -99,6 +101,7 @@ tests.forEach((test) => {
 });
 
 let index = 0;
+// console.log(arr)
 arrChild.forEach((ac) => {
   arr[index++].push(ac);
 });

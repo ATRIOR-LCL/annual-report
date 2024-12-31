@@ -4,7 +4,7 @@
       <div class="bg-slide" style="z-index: 3">
         <div class="txt1">
           <div class="txt1-a">
-            在<span>2</span>月<span>3</span>日，一个临近年关的日子
+            在<span>2月3日</span>，一个临近年关的日子
           </div>
           <div class="txt1-b">
             <span>{{ cnt }}</span>名兴趣相投的旅行者<br>和你一同参加了<br />
@@ -34,7 +34,11 @@
           <div class="txt2-c">别忘了<br />提瓦特大陆的星空<br>永远会有你的位置</div>
         </div>
         <div class="circle bg" ref="bg2">
-          <img src="../assets/img/image2.jpg" alt="" />
+          <img src="../assets/img/mengde.jpg" alt="" v-if="md">
+          <img src="../assets/img/liyue.jpg" v-if="ly" alt="">
+          <img src="../assets/img/daoqi.jpg" v-if="dq" alt="">
+          <img src="../assets/img/xumu.jpg" v-if="xm" alt="">
+          <img src="../assets/img/fengdan.hpg" v-if="fd" alt="">
         </div>
         <div class="circle large" ref="large2">
           <img src="../assets/img/image2.jpg" alt="" />
@@ -83,7 +87,22 @@ let ginshen = {
   'fontaine':'枫丹'
 }
 const fir = ginshen[liuyang.value.competition.asGenshin.firstUnlockedCountry]
-
+let md = false
+let ly = false
+let dq = false
+let xm = false
+let fd = false
+if(fir === '蒙德'){
+  md=true
+}else if(fir === '璃月'){
+  ly=true
+}else if(fir === '稻妻'){
+  dq = true
+}else if(fir === '须弥'){
+  xm =true
+}else{
+  fd = true
+}
 
 import { can, isnext, isScoll } from "@/assets/global";
 import { ref, onMounted } from "vue";
