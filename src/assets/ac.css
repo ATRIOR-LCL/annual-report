@@ -180,6 +180,7 @@
   position: absolute;
   width: 10%;
   right: 10%;
+  bottom: 70%;
   transform: rotate(30deg);
   animation: star4anim 1s ease-in-out infinite alternate;
 }

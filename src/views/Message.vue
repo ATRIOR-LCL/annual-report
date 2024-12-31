@@ -6,11 +6,9 @@
     class="next"
     :class="{ nextactive: isnext }"
   />
-  <Night id="page6" class="page hide" v-if="hasNight"></Night>
 
-  <Hard id="page7" class="page " v-if="hasMaxTries"></Hard>
 
-  <section id="page1" class="page hide">
+  <section id="page1" class="page">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -70,6 +68,9 @@
   <XinZeng id="page3" class="page hide"></XinZeng>
   <NewContest id="page4" class="page hide"></NewContest>
   <AC id="page5" class="page hide"></AC>
+  
+  <Night id="page6" class="page hide" v-if="hasNight"></Night>
+  <Hard id="page7" class="page hide" v-if="hasMaxTries"></Hard>
   
   <BiSai id="page8" class="page hide" v-if="hascontest"></BiSai>
   <Blue id="page9" class="page hide" v-if="hasBlue" ></Blue>
