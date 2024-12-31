@@ -17,17 +17,17 @@
       </div>
       <div class="acstar">
         <div class="stzx">
-          <img src="../assets/img/qq.png" alt="" />
+          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top2Avatar}`" alt="" />
           <span class="rank2"
             >{{ top2Name }}
             <span class="rank2ac">{{ top2Ac }}</span>
           </span>
-          <img src="../assets/img/qq.png" alt="" />
+          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top1Avatar}`" alt="" />
           <span class="rank1"
             >{{ top1Name }}
             <span class="rank1ac">{{ top1Ac }}</span>
           </span>
-          <img src="../assets/img/qq.png" alt="" />
+          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top3Avatar}`" alt="" />
           <span class="rank3"
             >{{ top3Name }}
             <span class="rank3ac">{{ top3Ac }}</span>
@@ -55,10 +55,14 @@ import { ref, onMounted } from "vue";
 import { liuyang, global } from "@/assets/global";
 let top1Name = global.value.annualACTopStandings[0].nickname;
 let top1Ac = global.value.annualACTopStandings[0].accrpted;
-let top2Name = global.value.annualACTopStandings[0].nickname;
-let top2Ac = global.value.annualACTopStandings[0].accrpted;
-let top3Name = global.value.annualACTopStandings[0].nickname;
-let top3Ac = global.value.annualACTopStandings[0].accrpted;
+let top1Avatar = global.value.annualACTopStandings[0].avatar;
+
+let top2Name = global.value.annualACTopStandings[1].nickname;
+let top2Ac = global.value.annualACTopStandings[1].accrpted;
+let top2Avatar = global.value.annualACTopStandings[1].avatar;
+let top3Name = global.value.annualACTopStandings[2].nickname;
+let top3Ac = global.value.annualACTopStandings[2].accrpted;
+let top3Avatar = global.value.annualACTopStandings[2].avatar;
 let isactive = liuyang.value.annualActive;
 const star1 = ref(null);
 const star2 = ref(null);
