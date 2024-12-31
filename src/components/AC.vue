@@ -11,25 +11,28 @@
           > 道是今年新AC的题目
         </div>
         <div class="sts" v-if="isactive">
-          你的刷题数 <span>{{ ss }}</span
-          > ，超过了OJ <span>{{ over }}%</span> 的用户
+          你的刷题数<span>{{ ss }}</span
+          >超过了OJ<span>{{ over }}%</span>的用户
         </div>
       </div>
       <div class="acstar">
         <div class="stzx">
-          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top2Avatar}`" alt="" style="border-radius: 50%;" />
           <span class="rank2"
-            >{{ top2Name }}
+            >
+          <img src="../assets/img/qq.png" alt="" style="border-radius: 50%;" />
+          {{ top2Name }}
             <span class="rank2ac">{{ top2Ac }}</span>
           </span>
-          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top1Avatar}`" alt="" style="border-radius: 50%;"/>
           <span class="rank1"
-            >{{ top1Name }}
+            >
+          <img src="../assets/img/qq.png" alt="" style="border-radius: 50%;"/>
+          {{ top1Name }}
             <span class="rank1ac">{{ top1Ac }}</span>
           </span>
-          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${top3Avatar}`" alt="" style="border-radius: 50%;" />
           <span class="rank3"
-            >{{ top3Name }}
+            >
+          <img src="../assets/img/qq.png" alt="" style="border-radius: 50%;" />
+          {{ top3Name }}
             <span class="rank3ac">{{ top3Ac }}</span>
           </span>
         </div>
@@ -54,16 +57,17 @@ import { can, isnext, isScoll } from "@/assets/global";
 import { ref, onMounted } from "vue";
 import { liuyang, global } from "@/assets/global";
 let top1Name = global.value.annualACTopStandings[0].nickname;
-let top1Ac = global.value.annualACTopStandings[0].accrpted;
+let top1Ac = global.value.annualACTopStandings[0].accepted;
 let top1Avatar = global.value.annualACTopStandings[0].avatar;
 
 let top2Name = global.value.annualACTopStandings[1].nickname;
-let top2Ac = global.value.annualACTopStandings[1].accrpted;
+let top2Ac = global.value.annualACTopStandings[1].accepted;
 let top2Avatar = global.value.annualACTopStandings[1].avatar;
 let top3Name = global.value.annualACTopStandings[2].nickname;
-let top3Ac = global.value.annualACTopStandings[2].accrpted;
+let top3Ac = global.value.annualACTopStandings[2].accepted;
 let top3Avatar = global.value.annualACTopStandings[2].avatar;
 let isactive = liuyang.value.annualActive;
+
 const star1 = ref(null);
 const star2 = ref(null);
 const star3 = ref(null);

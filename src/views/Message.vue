@@ -1,13 +1,16 @@
 <template>
   <p class="title fontremove">SDUT Online Judge</p>
+  <img src="../assets/img/music_playing.svg" alt="">
+  <img src="../assets/img/music_shutoff.svg" alt="">
   <img
-    src="../assets/img/next.svg"
+    src="../assets/img/up.svg"
     alt=""
     class="next"
     :class="{ nextactive: isnext }"
   />
+  <AC id="page5" class="page "></AC>
 
-  <section id="page1" class="page ">
+  <!-- <section id="page1" class="page ">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -48,7 +51,7 @@
     <div class="lt_txt" :class="{ upp: isClick }">
       <div class="kmc fontremove">
         <div class="hei">
-          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${liuyang.avatar}`" alt="" />
+          <img :src="`https://cdn.sdutacm.cn/oj/image/avatars/${liuyang.avatar}`" alt="" style="border-radius: 50%;" />
           <span>{{liuyang.username}}</span>
         </div>
         欢迎回家！在这一年里， SDUTOJ 发生了许多新的故事，其中也有属于你的篇章。
@@ -61,12 +64,11 @@
       <div class="jiyu2"></div>
       <div class="jiyu" id="jiyu1"></div>
     </div>
-  </section>
+  </section> -->
   <Special id="page2" class="page hide"></Special>
   <XinZeng id="page3" class="page hide"></XinZeng>
-  
   <NewContest id="page4" class="page hide"></NewContest>
-  <AC id="page5" class="page hide"></AC>
+  
   <Night id="page6" class="page hide" v-if="hasNight"></Night>
   <Hard id="page7" class="page hide" v-if="hasMaxTries"></Hard>
   <BiSai id="page8" class="page hide" v-if="hascontest"></BiSai>
@@ -292,14 +294,17 @@ section {
 @keyframes nexting {
   0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(3vh);
   }
   25% {
     opacity: 1;
   }
+  90%{
+    opacity: 1;
+  }
   100% {
     opacity: 0;
-    transform: translateX(-50%) translateY(3vh);
+    transform: translateX(-50%) translateY(-1vh);
   }
 }
 </style>

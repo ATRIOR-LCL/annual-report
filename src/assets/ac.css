@@ -25,7 +25,7 @@
 }
 
 .gongac {
-  letter-spacing: 0.06rem;
+  /* letter-spacing: 0.06rem; */
   display: inline-block;
   font-size: 0.5rem;
   font-weight: 700;
@@ -43,8 +43,12 @@
   color: #fff;
 }
 
+.gongac span:nth-child(1){
+  font-size: 1rem;
+}
+
 .xinac {
-  letter-spacing: 0.06rem;
+  /* letter-spacing: 0.06rem; */
   display: inline-block;
   font-size: 0.5rem;
   font-weight: 700;
@@ -59,7 +63,7 @@
 }
 
 .xinac span {
-  font-size: .7rem;
+  font-size: 1rem;
   color: #fff;
 }
 
@@ -79,8 +83,10 @@
 .sts span{
   white-space: nowrap;
   display: inline-block;
-  font-size: .5rem;
+  font-size: .6rem;
   color: #fff;
+  margin-left: .1rem;
+  margin-right: .1rem;
 }
 
 .acstar {
@@ -234,28 +240,45 @@
 .rank2,
 .rank3{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   font-size: .45rem;
   justify-content: center;
+}
+
+.rank1{
+  color:  #c39824;
+}
+.rank2{
+  margin-top: .5rem;
+  /* margin-top: .7rem; */
+  color: #adadad;
+}
+
+.rank3{
+  margin-top: 1rem;
+  color: #b77750;
 }
 
 .rank1ac {
   position: absolute;
   font-size: 0.5rem;
-  transform: translateX(-50%);
-  top: 120%;
+  /* transform: translateX(-50%); */
+  top: 90%;
 }
 
 .rank2ac {
   position: absolute;
   font-size: 0.5rem;
-  transform: translateX(-50%);
-  top: 120%;
+  /* transform: translateX(-50%); */
+  top: 85%;
 }
 
 .rank3ac {
   position: absolute;
   font-size: 0.5rem;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   top: 120%;
 }
 
