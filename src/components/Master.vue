@@ -3,6 +3,9 @@
     <div class="master">
       <div class="mstxt">
         <div class="mstxt1">纵观整个OJ</div>
+        <!-- <div class="mstxt5">在所有成就中，最稀有的成就是<span>{{ title }}</span></div>
+        <div class="mstxt6">仅有<span>{{ rareNum }}</span>人达成</div> -->
+
         <div class="mstxt2">
           <span>最强成就大师</span><img
             :src="`https://cdn.sdutacm.cn/oj/image/avatars/${masterAvatar}`"
@@ -12,8 +15,6 @@
         </div>
         <div class="mstxt3">已经达成了<span>{{ masterNum }}</span>项成就</div>
         <div class="mstxt4">距离<span>{{ globalAchiveNum }}</span>项全成就仅有一步之遥</div>
-        <div class="mstxt5">在所有成就中，最稀有的成就是<span>{{ title }}</span></div>
-        <div class="mstxt6">仅有<span>{{ rareNum }}</span>人达成</div>
       </div>
       <div class="cards">
         <div class="outlinePage">
@@ -198,7 +199,8 @@ onMounted(() => {
     { threshold: 0.5 }
   );
   const mstxt1s = document.querySelectorAll(
-    ".mstxt1, .mstxt2, .mstxt3, .mstxt4, .mstxt5, .mstxt6, .cards"
+    // ".mstxt1, .mstxt5, .mstxt6, .mstxt2, .mstxt3, .mstxt4, .cards"
+    ".mstxt1, .mstxt2, .mstxt3, .mstxt4, .cards"
   );
   mstxt1s.forEach((mstxt1) => ms1anim.observe(mstxt1));
 });

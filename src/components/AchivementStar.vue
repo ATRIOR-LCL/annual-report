@@ -167,11 +167,11 @@ onMounted(() => {
 @import url("../assets/achivestar.css");
 
 .gun {
-  animation: gundong 15s infinite linear;
+  animation: gundong 30s infinite linear;
 }
 
 .gun2 {
-  animation: gundong2 15s infinite linear;
+  animation: gundong2 30s infinite linear;
 }
 
 @keyframes gundong {

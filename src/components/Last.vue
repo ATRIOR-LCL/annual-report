@@ -2,7 +2,7 @@
   <section v-if="generate">
     <div class="font2">
       <span class="font2-txt">时至今日，</span>
-      <span class="font2-txt">我们的旅程已经开始了{{ days }}天。</span>
+      <span class="font2-txt">我们的旅程已经开始了 {{ days }} 天。</span>
       <span class="font2-txt">看似一眨眼的时间，</span>
       <span class="font2-txt">却承载了我们无可忘却的珍重回忆。</span>
       <span class="font2-txt">以这份回忆的重量所编织的纽带，</span>
@@ -110,7 +110,7 @@
                 <p v-if="percent > 0" class="percent">Top {{ percentVal }}%</p>
               </div>
               <div class="ac-num">
-                <div class="rating" v-if="showRating">
+                <div class="rating" v-if="false && showRating">
                   Rating
                   <span
                     class="rating-color"
@@ -139,6 +139,10 @@
 
                 <div class="achiv-num">
                   总成就数 <span>{{ userAchieve }}</span>
+                </div>
+
+                <div class="days-num">
+                  同行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>{{ days }}</span> 天
                 </div>
               </div>
               <div class="contests" v-if="haveContest">
@@ -234,7 +238,7 @@ onMounted(() => {
                 entry.target.classList.add("charsanim");
                 const title = document.querySelector(".title");
                 title.classList.remove("fontactive");
-              }, 31000);
+              }, 26000);
             } else {
               entry.target.classList.remove("charsanim");
             }
@@ -249,7 +253,7 @@ onMounted(() => {
             if (entry.isIntersecting) {
               setTimeout(() => {
                 entry.target.classList.add("font1anim");
-              }, 31000);
+              }, 26000);
             } else {
               entry.target.classList.remove("font1anim");
             }
@@ -275,13 +279,13 @@ onMounted(() => {
               });
               setTimeout(() => {
                 entry.target.classList.add("remove");
-              }, 30000);
+              }, 25000);
               setTimeout(() => {
                 const sdutoj = document.querySelector(".sdutoj");
                 sdutoj.classList.add("sdutojanim");
                 const btn = document.querySelector(".btn");
                 btn.classList.add("sdutojanim");
-              }, 31000);
+              }, 26000);
             }
           });
         },
@@ -294,7 +298,7 @@ onMounted(() => {
             if (entry.isIntersecting) {
               setTimeout(() => {
                 entry.target.classList.add("btm-logo");
-              }, 31000);
+              }, 26000);
             } else {
               entry.target.classList.remove("btm-logo");
             }
