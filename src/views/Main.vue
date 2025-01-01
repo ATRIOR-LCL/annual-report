@@ -26,7 +26,7 @@ onMounted(() => {
     (window.bgm = new Howl({
       src: [`${new URL("../assets/audio/bgm.mp3", import.meta.url).href}`],
       html5: true,
-      volume: 0.39,
+      volume: 0.66,
       loop: true,
     }));
 });

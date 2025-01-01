@@ -4,7 +4,7 @@
       <p class="yh">
         <span>这一年里，OJ 迎来了</span><span class="yhnum">{{ newUser }}</span
         ><span>名新用户</span>
-        <span class="nzc">总注册用户数已逾<p>&nbsp;{{allUser}}&nbsp;</p>人</span>
+        <span class="nzc">总用户数已逾<p>&nbsp;{{allUser}}&nbsp;</p>人</span>
       </p>
       <p class="tj">
         <span>这一年里，OJ 新增了</span><span class="tjnum">{{ newSubmit }}</span

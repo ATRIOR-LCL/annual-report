@@ -17,7 +17,7 @@
 }
 
 .cjli{
-  /* padding: .2rem; */
+  padding: .15rem;
   display: flex;
   font-size: 70 !important;
   /* width: 4rem !important; */
@@ -25,10 +25,14 @@
   justify-content: center !important;
   align-items: center !important;
 
-  .icon,
-  span{
+  .icon{
     display: block;
     /* margin: .05rem; */
+  }
+
+  span{
+    display: block;
+    margin-left: .15rem;
   }
 }
 

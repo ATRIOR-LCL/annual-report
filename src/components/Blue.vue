@@ -179,7 +179,7 @@ onMounted(() => {
             }, 900);
             setTimeout(() => {
               txt3s.forEach((txt1) => txt1.classList.add("fontactive"));
-            }, 2000);
+            }, 3000);
           }, 25000);
         } else {
           list.target.classList.remove("actives");

@@ -6,7 +6,7 @@
       </div>
       <div class="nightgl">
         这是属于你的不眠之夜
-        <div class="haiyou" v-if="hastogether">在这一晚，还有<span style="font-size: .7rem; margin-left: .2rem; margin-right: .2rem">{{haiyou}}</span>名用户和你一样在夜色中遨想星河</div>
+        <div class="haiyou" v-if="hastogether">在这一晚，还有<span style="font-weight: 200; font-size: .7rem; margin-left: .2rem; margin-right: .2rem">{{haiyou}}</span>名用户和你一样在夜色中遨想星河</div>
       </div>
       <div class="moon"></div>
       <div class="sea"></div>
