@@ -128,9 +128,11 @@
 }
 .txt3-b {
   color: rgba(209, 235, 253, .9) !important;
+  transition-delay: 2s;
 }
 .txt3-c {
   color: rgba(211, 239, 254, 1) !important;
+  transition-delay: 4s;
 }
 
 .large,

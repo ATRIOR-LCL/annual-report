@@ -6,6 +6,7 @@
     class="next"
     :class="{ nextactive: isnext }"
   />
+
   <section id="page1" class="page">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>

@@ -97,16 +97,6 @@
             让我们将新的玩法、新的设定<br />包裹成一份美梦般的快乐<br />再次传递给你
           </div>
         </div>
-        <!-- <div class="circle bg">
-          <img src="../assets/img/image3.jpg" alt="" />
-        </div>
-        <div class="circle large">
-          <img src="../assets/img/image3.jpg" alt="" />
-        </div>
-        <div class="circle small">
-          <img src="../assets/img/image3.jpg" alt="" />
-        </div>
-        <div class="circle-dark"></div> -->
       </div>
     </div>
   </section>
@@ -159,7 +149,7 @@ onMounted(() => {
             can.value = true;
             isScoll.value = true;
             isnext.value=true
-          }, 21000);
+          }, 24000);
           list.target.classList.add("actives");
           const txt1s = document.querySelectorAll(".txt1-a, .txt1-b, .txt1-c");
           const txt2s = document.querySelectorAll(".txt2-a, .txt2-b, .txt2-c ");
