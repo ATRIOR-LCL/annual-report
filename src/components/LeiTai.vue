@@ -4,8 +4,14 @@
       <img src="../assets/img/pmc.png" alt="" class="pmc" />
       <div class="lttxt">
         <div class="txt1">作为全新升级的组队赛</div>
-        <div class="txt2">你和你的队友所向披靡，怒切 <span>{{ cnt }}</span> 题</div>
-        <div class="txt3">一举夺得 <span :class="medal ? `text-${medal}-dark` : ''">{{ chengji }}</span> 的战绩</div>
+        <div class="txt2">
+          你和你的队友所向披靡，怒切 <span>{{ cnt }}</span> 题
+        </div>
+        <div class="txt3">
+          一举夺得
+          <span :class="medal ? `text-${medal}-dark` : ''">{{ chengji }}</span>
+          的战绩
+        </div>
         <div class="txt4">这份力量，就是你们的羁绊</div>
       </div>
       <div class="zgn">
@@ -24,12 +30,11 @@
 
 <script setup>
 import { liuyang } from "@/assets/global";
-let cnt = liuyang.value.competition.sdutpmc16th.solved
-let chengji = liuyang.value.competition.sdutpmc16th.awardStr
-let medal = liuyang.value.competition.sdutpmc16th.medal
+let cnt = liuyang.value.competition.sdutpmc16th.solved;
+let chengji = liuyang.value.competition.sdutpmc16th.awardStr;
+let medal = liuyang.value.competition.sdutpmc16th.medal;
 import { can, isnext, isScoll } from "@/assets/global";
 import { onMounted, ref } from "vue";
-const first = ref(true);
 onMounted(() => {
   const lttxts = document.querySelectorAll(
     ".szyx, .jz, .ygg, .cc, .hwc, .llzm"
@@ -41,15 +46,6 @@ onMounted(() => {
     (lists) => {
       lists.forEach((list) => {
         if (list.isIntersecting) {
-          if (first.value) {
-            setTimeout(() => {
-              can.value = true;
-              isnext.value = true;
-              isScoll.value = true;
-            }, 9000);
-            first.value = false;
-          }
-
           list.target.classList.add("ltactive");
           zgn.classList.add("ltactive");
           pmc.classList.add("bgactive");
@@ -71,6 +67,22 @@ onMounted(() => {
     },
     { threshold: 0.7 }
   );
+  const leitaianim = new IntersectionObserver(
+    (lists) => {
+      lists.forEach((list) => {
+        if (list.isIntersecting) {
+          setTimeout(() => {
+            can.value = true;
+            isnext.value = true;
+            isScoll.value = true;
+          }, 9000);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  const leitai = document.querySelector(".leitai");
+  leitaianim.observe(leitai);
   const alls = document.querySelectorAll(".txt1, .txt2, .txt3, .txt4");
   alls.forEach((alll) => ltall.observe(alll));
 });
