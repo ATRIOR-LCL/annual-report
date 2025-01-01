@@ -6,9 +6,7 @@
     class="next"
     :class="{ nextactive: isnext }"
   />
-
-
-  <section id="page1" class="page ">
+  <section id="page1" class="page">
     <div class="confettis" v-if="true">
       <div class="confetti"></div>
       <div class="confetti"></div>
@@ -63,28 +61,20 @@
       <div class="jiyu" id="jiyu1"></div>
     </div>
   </section>
-
   <Special id="page2" class="page hide"></Special>
   <XinZeng id="page3" class="page hide"></XinZeng>
   <NewContest id="page4" class="page hide"></NewContest>
   <AC id="page5" class="page hide"></AC>
   <Night id="page6" class="page hide" v-if="hasNight"></Night>
   <Hard id="page7" class="page hide" v-if="hasMaxTries"></Hard>
-  
-  
   <BiSai id="page8" class="page hide" v-if="hascontest"></BiSai>
   <Blue id="page9" class="page hide" v-if="hasBlue" ></Blue>
-
   <XiaoSai id="page10" class="page hide" v-if="hasXiaoSai"></XiaoSai>
   <XinSheng id="page11" class="page hide" v-if="ncc"></XinSheng>
   <LeiTai id="page12" class="page hide" v-if="haspmc"></LeiTai>
-
   <AchivementStar id="page13" class="page hide" v-if="hasAchive"></AchivementStar>
-
   <Master id="page14" class="page hide"></Master>
-
   <Last id="pae15" class="page hide"></Last>
-
   <section style="z-index: -1"></section>
 </template>
 <script setup>

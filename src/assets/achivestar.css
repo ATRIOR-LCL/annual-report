@@ -17,17 +17,21 @@
 }
 
 .cjli{
+  /* padding: .2rem; */
   display: flex;
-  width: auto;
-  /* line-height: .5rem; */
-  /* flex-direction: column; */
-  justify-content: space-around !important;
+  font-size: 70 !important;
+  /* width: 4rem !important; */
+  /* flex-direction: column !important; */
+  justify-content: center !important;
   align-items: center !important;
+
+  .icon,
+  span{
+    display: block;
+    /* margin: .05rem; */
+  }
 }
-.cjli .icon{
-  position: relative;
-  top: 10% !important;
-}
+
 
 .pos {
   position: absolute;
@@ -257,24 +261,15 @@
   /* transition: all 5s linear; */
 }
 .waitao li {
-  display: inline-block;
   width: auto;
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
-  padding-left: .2rem;
-  padding-right: .2rem;
-  padding-top: .1rem;
-  padding-bottom: .1rem;
   text-align: center;
   border-radius: 20px;
-  /* margin: 0.23rem; */
+  margin: 0.23rem;
   font-size: 0.5rem;
   /* font-weight: 700; */
   color: #fff;
   margin: .1rem;
-}
-
-.icon{
-  display: inline-block;
 }

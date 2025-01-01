@@ -23,11 +23,12 @@
     "vue": "^3.5.13",
     "vue-fullpage.js": "^0.2.20",
     "vue-router": "^4.5.0",
-    "vue3-fullpage": "^0.2.0"
+    "vue3-fullpage": "^0.2.0",
+    "vue3-marquee": "^4.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
-    "vite": "^6.0.3",
+    "vite": "^6.0.6",
     "vite-plugin-vue-devtools": "^7.6.5"
   }
 }
