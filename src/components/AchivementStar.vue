@@ -19,7 +19,7 @@
       </div>
       <ul class="chengjiu">
         <div class="waitao">
-          <Vue3Marquee class="hang" v-for="(num, index) in len" :key="index" :direction="index%2==0? 'normal': 'reverse'">
+          <Vue3Marquee class="hang" v-for="(num, index) in len" :key="index" :direction="index%2==0? 'normal': 'reverse'" :clone="true">
             <li
               class="cjli"
               v-for="(item, index) in arr[index]"
