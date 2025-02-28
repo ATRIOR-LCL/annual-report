@@ -1,29 +1,12 @@
-# annual-report
+# SDUT OnlineJudge3 2024 Annual Report
 
-This template should help get you started developing with Vue 3 in Vite.
+OJ3 2024 年度报告
 
-## Recommended IDE Setup
+## Project Overview
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+### Technology Stack
+* Vue3
+### Key Features
+* 移动端为主
+* 总结 SDUTOJ3 在2024年的全局用户数据并进行展示
+* 根据用户的个人情况（提交数，是否参与比赛等）提供用户的个性化年度报告
